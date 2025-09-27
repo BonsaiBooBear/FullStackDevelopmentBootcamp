@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Basics</title>
+    <!--EXTERNAL STYLING-->
+    <link rel="stylesheet" href="index.css">
+
+    <!--INTERNAL STYLING-->
+    <!-- <style>
+        h1 {
+            color: white;
+            background-color: darkcyan;
+            font-size: 80px;
+            font-weight: 100;
+            /* border-width: 4px;
+            border-style: solid;
+            border-color: darkgreen; */
+            border: 4px solid darkgreen;
+            border-radius: 10px;
+        }
+
+        p {
+            color: whitesmoke;
+            background-color: darkcyan;
+            font-size: 30px;
+            border-radius: 6px;
+        }
+
+        img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>CSS Basics</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam fugit praesentium mollitia fugiat provident incidunt commodi est ad voluptatum. Nostrum, error nihil. Dolore, non nihil! Vitae totam voluptatem illo rerum error, aliquid laudantium tempora animi et nobis sequi laboriosam esse nesciunt fugiat alias officiis temporibus. Placeat quas error eos itaque omnis harum magni ad numquam optio non odit nostrum eveniet obcaecati esse laboriosam veniam consequatur iusto, porro vel! Dolore facere eius illo voluptate blanditiis molestiae enim cumque iure laboriosam quisquam ea expedita excepturi ducimus reprehenderit tempora, cum mollitia. Necessitatibus, ratione. Vero nihil possimus quia sunt laboriosam? Quidem ipsa molestiae aliquid.
+    </p>
+    <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <ul>
+        <li>
+            <a href="https://www.facebook.com/">Facebook</a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </li>
+        <li class="test-class">
+            <a href="https://www.twitter.com/">Twitter</a>
+        </li>
+        <li>
+            <a href="https://www.twitter.com/" id="linkedin-link">LinkedIn</a>
+        </li>
+    </ul>
+
+    <h2 class="test-class" style="color: #ff5100bf">Color code</h2>
+
+    <p class="test-class">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos delectus facere facilis quae modi consequatur magnam similique labore provident et.</p>
+</body>
+</html>
+
+<br><br><br><br>
+<hr>
+
+<h1>Notes From Live Session</h1>
+<pre>
+&lt;!--
+    # CSS
+        - Cascading Style Sheets
+        - Add styles to webpage initially created using HTML
+        - 3 types of styling
+            - Inline styling (Highest priority)
+                - 'style' attribute
+                - Syntax:
+                    - style="property:value"
+                    - style="property:value; property2:value2; ..."
+                        - property: name of the style
+                        - value: value for that style
+            - Internal styling
+                - 'style' tag (inside head tag)
+                - Syntax:
+                  &lt;style&gt;
+                    h1 {
+                        property1:value1;
+                        property2:value2;
+                    }
+                  &lt;/style&gt;
+            - External styling
+                - Create a separate .css file
+                - Link this external CSS file to the HTML file
+                    - Syntax:
+                      &lt;link rel="stylesheet" href="relative-path.css"&gt;
+                       - rel: Relation
+                       - href: Relative path of CSS file
+
+        - Properties:
+            - color: Add color to an element
+            - background-color: Background color of the element
+            - font-size: Size of text element
+            - font-weight: Bold/Light (100-900)
+            - border: Border to an element
+                - Syntax:
+                  border: [width] [style] [color]
+                - Sub properties:
+                    - border-width: Width of the border
+                    - border-style: Border style (solid, dashed, dotted)
+                    - border-color: Color of the border
+            - border-radius: Rounded borders
+            - width: Width of the element
+            - height: Height of the element
+            - padding: Space around the content before the border
+            - margin: Space around the content after the border
+            - padding, margin
+                - Syntax: 4 units: [top] [right] [bottom] [left]
+                - Sub properties:
+                    - *-top: Padding/Margin on the top
+                    - *-right: Padding/Margin on the right
+                    - *-bottom: Padding/Margin on the bottom
+                    - *-left: Padding/Margin on the left
+                - More syntaxes:
+                    - 1 unit: All sides
+                    - 2 units: [top, bottom] [right, left]
+                    - 3 units: [top] [right, left] [bottom]
+            - font-family: Font type of the text element
+            - text-align: Align the text center/left/right/justify
+
+        # Selectors ***
+            - Elements Selector (h1, p, img, etc.)
+            - Class Selector (.)
+            - ID Selector (#)
+            - Universal Selector (*)
+
+            - Side note:
+                - These selectors can be grouped together as well
+                    - Eg.: p, h1, .test-class, #test-id {}
+
+        # Specificity rules:
+            - Inline > Internal, External
+            - Latest style rule is applied
+
+        # Color codes
+            - RGB (Red, Green, Blue)
+                - Syntax: rgb(R, G, B)
+                    - R, G, B can have values from 0-255
+                - Examples:
+                    - rgb(0, 0, 255) : Blue
+                    - rgb(255, 0, 0) : Red
+                    - rgb(0, 255, 0) : Green
+                    - rgb(0, 0, 0) : Black
+                    - rgb(255, 255, 255) : White
+                - RGBA (A - Opacity/Transparency)
+                    - A: 0-1 (0 is invisible, 1 is visible)
+
+            - HEX (0-F)
+                - Syntax: #RRGGBB
+                    - RR, GG, BB can have values from 00-FF
+                - Examples:
+                    - #0000FF : Blue
+                    - #FF0000 : Red
+                    - #00FF00 : Green
+                    - #000000 : Black
+                    - #FFFFFF : White
+                - Alpha
+                    - 2 more digits added at the end
+       
+        
+        # Additional notes
+            - Comments: /* */
+            - Class vs ID
+                - Multiple elements can have the same class
+                - No two elements can have the same ID
+--&gt;
+</pre>

@@ -1,0 +1,45 @@
+# Git: Version control tool
+
+#Github: A cloud for uploading project tracked using Git
+    - Alternatives:
+        - Gitlab
+        - Bitbucket
+
+# Terms:
+    - repository: Project folder (Being tracked by Git)
+        - local repository: Local project folder
+        - remote repository:  Project folder on Github
+    - stage: Prepare files to be committed
+    - commit: Save changes
+
+# Local Workflow
+    - Working directory: Make changes (Where developer codes) (Red)
+    - Staging area: Changes ready to be 'committed' are moved here (Green)
+    - Local repository (.git): Committed changes are saved here
+
+# Steps to upload a project on Github
+    - Github
+        - Create a new remote repository
+            - name: Name of the project
+            - description: description of the project
+            - visibility: Private/Public
+                - Public (Open source)
+            - README.md: Project description file
+    - Local:
+        - First time:
+            - git init: Initialize a git repository
+            - git add: Stage files
+                - git add file1.html: Stage that file ONLY
+                - get add .: Stage ALL files
+            - git commit -m "Message": Commit changes
+
+        - Generic
+            - git status: Current status of local repository
+    - Working with Remotes
+
+# Branches:
+    - Default (master/main)
+    - Separate branches can be created to work on individual features (e.g. in Amazon: Separate branches for Amazon Pay, Shopping, Prime Video features)
+
+# References:
+https://uidaholib.github.io/get-git/images/workflow.png

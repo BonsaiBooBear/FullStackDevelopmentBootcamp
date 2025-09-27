@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <h1>Application Form</h1>
+        Name: <input type="text" name="name" placeholder="Name" required><br><br>
+        Age: <input type="number" name="age" placeholder="Age" required><br><br>
+        Email: <input type="email" name="email" placeholder="Email" required><br><br>
+        Password: <input type="password" name="password" placeholder="Password" required><br><br>
+        Date of Graduation: <input type="date" name="date-of-graduation"><br><br>
+        Resume: <input type="file" name="resume"><br><br>
+        Gender:
+            <select name="gender2">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="O">Others</option>
+            </select>
+        <br><br>
+        Gender:
+        <input type="radio" name="gender" value="M">Male
+        <input type="radio" name="gender" value="F">Female
+        <input type="radio" name="gender" value="O">Others
+        <br><br>
+        Hobby:
+        <input type="checkbox" name="hobbies" value="S">Swimming
+        <input type="checkbox" name="hobbies" value="W">Working out
+        <input type="checkbox" name="hobbies" value="L">Listening to music
+        <br><br>
+        Describe your experience<br>
+        <textarea rows="10" cols="50" maxlength="100"></textarea>
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Random</button>
+    </form>
+</body>
+</html>
+
+<br><br><br><br>
+<hr>
+
+<h1>Notes From Live Session</h1>
+<pre>
+&lt;!--
+    # Forms:
+         - Used to collect data from the user
+         - Tags:
+            - form: Wrapper tag for HTML Forms
+            - input: Input field for user data
+                - 'type' attribute
+                    - text: Simple text input
+                    - number: Number input
+                    - email: Email input (Browser validation)
+                    - password: Password
+                    - date: Date input
+                    - time: Time input
+                    - datetime-local: Date + Time input
+                    - file: File input
+                    - radio: Single selection input
+                    - checkbox: Multiple selection input
+                    - button: Button input
+                - 'name' attribute: Provides name to the input field
+                - 'value' attribute: Default value for the input field
+                - 'placeholder' attribute: Provide a hint
+                - 'required' attribute: Make any field required (Browser validation)
+                - 'disabled' attribute:  Disable and input field
+            - button: Buttons
+                - 'type' attribute
+                    - submit: Used to submit a forms
+                    - reset: Used to reset the form
+                    - button: Random button in the form
+            - select: Dropdown (Single selection)
+                - option tag: Individual options
+            - textarea: Lengthy text inputs
+                - 'rows' attribute: Number of rows
+                - 'cols' attribute: Number of columns
+
+
+    # Additional Notes:
+        - input type="hidden": Don't want to show a form, but want to process the values with other details
+        - Before the button element was introduced, submit buttons were input types: &lt;input type="button" value="Submit"&gt;
+        - Self-closing tags will still be recognized by most browsers if they include the '/' but best practice is to not include them
+            - Use &lt;input&gt; instead of &lt;input /&gt;
+            - Use &lt;br&gt; instead of &lt;br /&gt;
+--&gt;
+</pre>

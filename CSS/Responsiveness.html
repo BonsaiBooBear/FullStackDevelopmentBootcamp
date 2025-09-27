@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiveness</title>
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        #container {
+            /* width: 500px; */
+            /* width: 75vw; */
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        /* img{
+            width: 100%;
+        } */
+
+        #parent {
+            width: 400px;
+            background-color: aquamarine;
+            height: 200px;
+        }
+
+        #child {
+            width: 50%;
+            background-color: cadetblue;
+            height: 200px;
+        }
+
+        #container-2 {
+            font-size: 20px;
+        }
+
+        #container-2 p {
+            /* font-size: 1.5em; */
+            font-size: 1.5rem;
+        }
+
+        #container-2 img {
+            width: 30rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="container">
+        <h1>Responsiveness</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis similique porro quod distinctio enim molestias pariatur, natus explicabo deleniti nostrum facere sint suscipit assumenda corrupti, quis consequatur? Nulla esse maxime nostrum iure laboriosam a aliquam, in accusamus assumenda? Harum earum, impedit totam suscipit id minima possimus! Tempore, architecto veritatis! Neque?</p>
+        <img src="https://www.training.com.au/wp-content/uploads/Full-Stack-Developer-1.jpeg">
+    </div>
+
+    <div id="parent">
+        <div id="child"></div>
+    </div> -->
+
+    <!-- <div style="background-color: brown; height: 50vh;"></div> -->
+
+    <div id="container-2">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem amet eaque cumque quos, doloremque possimus corrupti molestias nihil ipsa dicta numquam iusto alias saepe sequi cupiditate, at quia doloribus esse qui repellat veritatis! Odit mollitia exercitationem sapiente tempore aut reiciendis, adipisci velit magnam dicta voluptate nulla. Accusantium aspernatur dicta quaerat.</p>
+        <img src="https://www.training.com.au/wp-content/uploads/Full-Stack-Developer-1.jpeg">
+    </div>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+&lt;!--
+    # Absolute vs Relative units
+        - Absolute units:
+            - Fixed size
+            - Dimensions don't change based on parent element/viewport (browser) size.
+            - Examples:
+                - px: Pixels
+                - pt: Points
+        - Relative units:
+            - Dynamic/Variable size
+            - Dimensions change based on parent element/viewport (browser) size.
+            - Examples:
+                - %: Relative to parent element
+                - vw: Relative to 'viewport width'
+                    - 1vw = 1% of 'viewport width'
+                - vh: Relative to 'viewport height'
+                    - 1vh = 1% of 'viewport height'
+                - em: 1 * Font size of the parent element
+                    - 1em = Actual font size of parent element
+                - rem: 1 * Font size of the root element (html)
+                    - 1rem = Actual font size of root element
+--&gt;
+</pre>

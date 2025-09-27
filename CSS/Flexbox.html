@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            border: 1px solid black;
+            background-color: #EEE;
+            border-radius: 10px;
+            margin: 10px 20px;
+            padding: 10px;
+        }
+
+        .card img {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .container-2 {
+            display: flex;
+            border: 1px solid black;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .container-2 {
+            border: 1px solid black;
+            height: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        } */
+
+         /* .container-2 {
+            display: flex;
+            border: 1px solid black;
+            flex-direction: column;
+            height: 100vh;
+            flex-wrap: wrap;
+        } */
+
+        #img-3 {
+            order: 0;
+        }
+
+        #img-2 {
+            order: 2;
+        }
+
+        #img-1 {
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex</h1>
+    <!-- <ul style="display: flex; list-style: none; justify-content: space-between;">
+        <div style="display: flex;">
+            <li>Home</li>
+            <li>Home</li>
+        </div>
+        <div style="display: flex;">
+            <li>Home</li>
+            <li>Home</li>
+        </div>
+    </ul> -->
+
+    <!-- <div class="container">
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/61OHplw85eL.__AC_SX300_SY300_QL70_FMwebp_.jpg">
+            <p>Soundcore Anker Life Q20 Hybrid</p>
+            ⭐⭐⭐⭐ (27K+)
+            <p>$199.99</p>
+            <button>Add to cart</button>
+            <button>Buy now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/61OHplw85eL.__AC_SX300_SY300_QL70_FMwebp_.jpg">
+            <p>JBL Anker Life Q20 Hybrid</p>
+            ⭐⭐⭐⭐ (27K+)
+            <p>$199.99</p>
+            <button>Add to cart</button>
+            <button>Buy now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/61OHplw85eL.__AC_SX300_SY300_QL70_FMwebp_.jpg">
+            <p>Boat Anker Life Q20 Hybrid</p>
+            ⭐⭐⭐⭐ (27K+)
+            <p>$199.99</p>
+            <button>Add to cart</button>
+            <button>Buy now</button>
+        </div>
+    </div> -->
+    <div class="container-2">
+        <img src="https://plus.unsplash.com/premium_photo-1663127037157-5710981bc7b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbW1pbmclMjBsYW5ndWFnZXxlbnwwfHwwfHx8MA%3D%3D" height="180" width="270" id="img-1">
+        <img src="https://images.unsplash.com/photo-1662638600476-d563fffbb072?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1pbmclMjBsYW5ndWFnZXxlbnwwfHwwfHx8MA%3D%3D" height="250" width="370" id="img-2">
+        <img src="https://plus.unsplash.com/premium_photo-1678566154673-a728037f3f00?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZ3JhbW1pbmclMjBsYW5ndWFnZXxlbnwwfHwwfHx8MA%3D%3D" height="400" width="276" id="img-3">
+    </div>
+</body>
+</html>
+
+<br><br><br><br>
+<hr>
+
+<h1>Notes From Live Session</h1>
+<pre>
+&lt;!--
+    # Flexbox ***
+        - Organize elements in ONE direction
+        - Properties
+            - Container
+                - display: flex ** (Element flexible in nature)
+                - flex-direction ***: Set the direction of the flex container elements.
+                    - row (default)
+                - justify-content **: Align the child elements within the flex container (across main axis - default X Axis)
+                    - start (default) Elements align at the start of the flex container
+                    - end: Elements align to the end of the flex container
+                    - center: Elements align in the center of the flex container
+                    - space-around: Equal space on both sides of the elements (space in between will be 2* space)
+                    - space-evenly: Equal space on both sides of the elements (space in between will be merged)
+                    - space-between: Outside elements align to the start and end. Equal space will be between each of the remaining elements.
+                - align-items **: Align the child elements within the flex container (through cross axis - default Y Axis)
+                    - start (default): Elements align at the top of the flex container
+                    - end: Elements align at the bottom of the flex container
+                    - center: Elements align in the middle of the flex container
+                - flex-wrap: Wrap the child elements if they exceed the parent flex container width
+                    - no-wrap (default): Child elements will NOT wrap to the next row. Will have a horizontal scroll.
+                    - wrap: Child elements WILL wrap to the next row if they cannot fit within the viewport.
+                    - wrap-reverse: Child elements will wrap to the next row, but the order of elements will be reversed.
+            - Item 
+                - order: Set the order of individual items
+                    - Min and Default (0): The lesser value, the higher order
+
+        # Main and Cross axis
+            - flex-direction: row (default)
+                - Main axis: X Axis
+                - Cross axis: Y Axis
+            - flex-direction: column
+                - Main axis: Y Axis
+                - Cross axis: X Axis
+--&gt;
+</pre>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<pre>
+    &lt;!--
+    Type in "html:5" for instant Boiler Plate
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        
+    &lt;/body&gt;
+    &lt;/html&gt;
+    --&gt;
+</pre>
+<html>
+    <head>
+        <title>HTML Tables</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Please ignore the style part until CSS is covered -->
+         <style>
+            table, tr, th, td {
+                border: 1px solid white;
+                border-collapse: collapse;
+                padding: 5px;
+                text-align: center;
+            }
+         </style>
+    </head>
+    <body>
+        <h1>Tables</h1>
+        <!-- <table>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Anna</td>
+                <td>Admin</td>
+                <td>Inactive</td>
+            </tr>
+            <tr>
+                <td>Oscar</td>
+                <td>Editor</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>Giovanni</td>
+                <td>Editor</td>
+                <td>Active</td>
+            </tr>
+        </table> -->
+        <!-- <table>
+            <tr>
+                <th>Name</th>
+                <th>Color</th>
+                <th>Fruit</th>
+            </tr>
+            <tr>
+                <td>Simon</td>
+                <td>Red</td>
+                <td>Apple</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td colspan="2">Orange</td>
+            </tr>
+            <tr>
+                <td>Ananya</td>
+                <td>Blue</td>
+                <td>Pineapple</td>
+            </tr>
+        </table> -->
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Color</th>
+                <th>Fruit</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Simon</td>
+                <td>Red</td>
+                <td>Apple</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>Banana</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Ananya</td>
+                <td>Blue</td>
+                <td>Pineapple</td>
+            </tr>
+            <tr>
+                <td>Yellow</td>
+                <td>Banana</td>
+            </tr>
+        </table>
+        <br><br>
+        <img src="images/rowspan-colspan.png">
+    </body>
+</html>
+
+<br><br><br><br>
+<hr>
+
+<h1>Notes From Live Session</h1>
+<pre>
+&lt;!--
+    # Tables:
+        - Display data in rows and column format
+        - Tags:
+            - &lt;table&gt;&lt;/table&gt;: Wrapper tag for HTML Tables
+            - &lt;tr&gt;&lt;/tr&gt;: Table rows
+            - &lt;th&gt;&lt;/th&gt;: Table headers
+            - &lt;td&gt;&lt;/td&gt;: Table data (cells)
+        - Boilerplate syntax for tables:
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Table Header 1&lt;/th&gt;
+                    &lt;th&gt;Table Header 2&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Table Data 1&lt;/td&gt;
+                    &lt;td&gt;Table Data 2&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        - Span (Merge)
+            - colspan: Column Span
+                - Data to be same across 'n' number of columns within a row
+            - rowspan: Row Span
+                - Data to be same across 'n' number of rows within same column
+--&gt;
+</pre>
