@@ -36,6 +36,7 @@
             - git commit -m "Message": Commit changes
             - git remote add origin [remote repository link]: Link local repository link to remote repository
             - git push -u origin master: Push committed changes to 'master' branch in the remote repository
+                - -u: upstream
         
         - Second time and onward:
             - git add: Stage files
@@ -46,7 +47,12 @@
 
         - Generic
             - git status: Current status of local repository
-    - Working with Remotes
+
+# Steps to download a project on Github
+    - First time:
+        - git clone [remote repository link]: Clone of online repository in local machine
+    - Second time and onward
+        - git pull: Pull latest commits from 'master' branch in the remote repository to local repository
 
 # Branches:
     - Default (master/main)
