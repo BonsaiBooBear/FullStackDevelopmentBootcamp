@@ -1,47 +1,47 @@
 .custom-header {
-    background: #FFFFFF;
-    background: radial-gradient(circle, rgba(255,255,255,1)0%, rgba(33,37,41,1)100%);
+  background: #FFFFFF;
+  background: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(33, 37, 41, 1) 100%);
 }
 
 .friend-card {
-    max-width: 600px
+  max-width: 600px
 }
 
 .friend-card .mutual-friends {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .friend-card .mutual-friends img {
-    border-radius: 50%;
-    margin-left: -10px;
+  border-radius: 50%;
+  margin-left: -10px;
 }
 
 @media screen and (max-width: 768px) {
-    #category-section {
-        margin-bottom: 1 rem;
-    }
+  #category-section {
+    margin-bottom: 1rem;
+  }
 
-    .friend-card {
-        text-align: center;
-        padding-top: 1em;
-        margin: auto;
-        max-width: 300px
-    }
+  .friend-card {
+    text-align: center;
+    padding-top: 1em;
+    margin: auto;
+    max-width: 300px
+  }
 
-    .friend-card img.rounded-start {
-        width: 100px !important;
-        border-radius: 50% !important;
-    }
+  .friend-card img.rounded-start {
+    width: 100px !important;
+    border-radius: 50% !important;
+  }
 
-    .friend-card .friend-name {
-        flex-direction: column;
-    }
-    
-    .friend-card .card-text {
-        padding: 1em 0;
-    }
+  .friend-card .friend-name {
+    flex-direction: column;
+  }
+  
+  .friend-card .card-text {
+    padding-bottom: 0.5em;
+  }
 
-    .friend-card .mutual-friends img {
-        padding-bottom: 0.5rem;
-    }
+  .friend-card .mutual-friends {
+    padding-bottom: 1em;
+  }
 }
