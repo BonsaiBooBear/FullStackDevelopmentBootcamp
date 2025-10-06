@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditions</title>
+</head>
+<body>
+  
+  <script>
+    var x = 10, y = 20
+    var z = 30
+
+    // if (y > x) {
+    //   console.log("YES")
+    // } else {
+    //   console.log("NO")
+    // }
+
+    // if (y > z) {
+    //   console.log("YES")
+    // } else {
+    //   console.log("NO")
+    // }
+
+    // if (x > y) {
+    //   console.log("Test 1")
+    // } else if (x > z) {
+    //   console.log("Test 2")
+    // } else {
+    //   console.log("Test 3")
+    // }
+
+    /* ---------------------------------------------------*/
+    // Example 1: Check if the number is greater than 100
+    // var number = Number(prompt("Enter any number"))
+    // // Number() converts string input to number
+  
+    // if (number > 100) {
+    //   console.log ("Input is greater than 100")
+    // } else {
+    //   console.log("Input is not greater than 100")
+    // }
+
+    /* ---------------------------------------------------*/
+    // Example 2: Check if two numbers are equal or not
+    // var num1 = Number(prompt("Enter first number"))
+    // var num2 = Number(prompt("Enter second number"))
+
+    // if (num1 == num2) {
+    //   console.log("Both numbers are equal")
+    // } else {
+    //   console.log("Both numbers are unequal")
+    // }
+
+    /* ---------------------------------------------------*/
+    // Example 3: Find greater number among the 2 input numbers
+    // var num1 = Number(prompt("Enter first number"))
+    // var num2 = Number(prompt("Enter second number"))
+
+    // if (num1 > num2) {
+    //   console.log("Number 1 is greater than Number 2")
+    // } else if (num2 > num1) {
+    //   console.log("Number 2 is greater than Number 1") 
+    // } else {
+    //   console.log("Both the numbers are equal")
+    // }
+
+    /* ---------------------------------------------------*/
+    // Example 4: Find the color of the fruit
+
+    // Solution 1: if else condition
+    // var fruit = prompt("Enter fruit name")
+    // if (fruit == "Apple") {
+    //   console.log("RED")
+    // } else if (fruit == "Orange") {
+    //   console.log("ORANGE")
+    // } else if (fruit == "Banana") {
+    //   console.log("YELLOW")
+    // } else {
+    //   console.log("N/A")
+    // }
+
+    // Solution 2: switch case
+    // var fruit = prompt("Enter fruit name")
+    // switch(fruit) {
+    //   case "Apple":
+    //     console.log("RED")
+    //     break
+    //   case "Orange":
+    //     console.log("ORANGE")
+    //     break
+    //   case "Banana":
+    //     console.log("YELLOW")
+    //     break
+    //   default:
+    //     console.log("N/A")
+    // }
+
+     /* ---------------------------------------------------*/
+    var num1 = Number(prompt("Enter first number"))
+    var num2 = Number(prompt("Enter second number"))
+    console.log(num1 == num2 ? "EQUAL" : "UNEQUAL")
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+&lt;!--
+  # Conditions:
+    - Create logic based on boolean value (true/false)
+    - if else ***
+      - Syntax:
+          if (condition) {
+            // Code for the true condition
+          } else {
+            // Code for false condition
+          }
+      - else if: Add follow up conditions
+      - Syntax:
+          if (condition1) {
+            // condition1 is true
+          } elseif (condition2) {
+            // condition1 is false, but condition2 is true
+          } else {
+            // condition1 and condition2 are false
+          }
+    - switch case condition: Check one value against multiple values
+        - Syntax:
+          switch (variable) {
+            case "value1":
+              //Code to be executed when variable == value1
+            case "value2":
+              //Code to be executed when variable == value2
+            case "value3":
+              //Code to be executed when variable == value3
+            ...
+            default:
+              // Default case
+          }
+    - Ternary Operator *
+        - 'Syntactic sugar' for if else blocks
+        - Syntax: condition ? valueIfTrue : valueIFFalse
+--&gt;
+</pre>

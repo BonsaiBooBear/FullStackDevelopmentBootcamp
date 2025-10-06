@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strings</title>
+</head>
+<body>
+  <h1>Strings</h1>
+  <p id="description"></p>
+  <script>
+    // var x = "JavaScript"
+    // console.log(x);
+
+    // var x = "We are learning JavaScript :)\n\nThis is the 3rd tech that we are learning after HTML and CSS"
+    // console.log(x);
+  
+    // var x = 'He said, "I love to read novels :)"'
+    // var x = "This is a 'beginner' course"
+    // var x = "He said, \"I love to read novels :)\""
+    // console.log(x);
+
+    // var x= "My hobbies are:\n \t1. Swimming \n\t2. Dancing \n\t3. Singing"
+    // console.log(x)
+
+    // var name="Maria"
+    // console.log(name[4])
+
+    // var firstName = "Kayla"
+    // var lastName = "Pauley"
+
+    // console.log(firstName + " " + lastName)
+
+    // console.log(1 + 1)
+    // console.log(1 + '1')
+    // console.log(null + "test" + 1)
+    // console.log(true + false)
+
+    // var student1 = "PabloExequiel"
+    // console.log(student1.length)
+
+    // var x = ""
+    // console.log(x.length)
+
+    //Formula to get last character of any string
+    // var name = "Sylvia"
+    // console.log(name[name.length-1])
+
+    // var name = "Simon"
+    // console.log(name.toUpperCase());
+    // console.log(name.toLowerCase());
+    // console.log(name.indexOf("n"))
+    // console.log(name.indexOf("y"))
+    // console.log(name.indexOf("im"))
+
+    // var name = "Anne"
+    // console.log(name.indexOf("n")) //1
+
+    // var name = "Banana"
+    // console.log(name.indexOf("a"))
+    // console.log(name.lastIndexOf("a"))
+    // console.log(name.includes("b"))
+
+    // var student1 = "Ananya"
+    // console.log(student1.slice(0, 3)) // 0 -> 2
+    // console.log(student1.slice(2, 5)) // 2 -> 4
+    // console.log(student1.slice(2)) // 2 -> 
+    // console.log(student1.slice())
+    // console.log(student1.substr(1, 2))
+    // console.log(student1.substr(2, 3))
+    // console.log(student1.slice(-3))
+    // console.log(student1.substring(-3)) // Counts from behind (no zero)
+    // console.log(student1.slice(3, 2)) // Empty string
+    // console.log(student1.substring(3, 2)) //Reverses the index
+
+    // var student1 = "Banana"
+    // console.log(student1.replace("a", "z")) // Replaces first occurrence
+    // console.log(student1.replaceAll("a", "z")) // Replaces all occurrences
+
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+&lt;!--
+  # Strings
+    - "", '', ``
+    - Escape character (\)
+    - Next line character (\n)
+    - Tab space character (\t)
+
+    - Access a specific character in a string using index
+      - Syntax: str[index]
+        - Index: Position - 1
+        - String of length 'n', index range: 0 -> n-1
+
+    - '+' operator works as a concatenation operator with strings
+      - String + String = String
+      - String + Any data = String
+      - Any data + String = String
+
+    - Properties:
+      - length: Total number of characters in a string (spaces included)
+        - Empty strings do not have a length
+    - Methods:
+      - toUpperCase(): Return the string in upper case
+      - toLowerCase(): Return the string in lower case
+      - indexOf() **: Returns the index of the FIRST occurrence of the substring
+        (any portion of the string) in the string, else returns -1
+      - lastIndexOf(): Returns the index of the LAST occurrence of the substring
+        (any portion of the string) in the string, else returns -1
+      - includes() **: Returns true if the substring exists, else returns false
+          (case sensitive)
+      - concat(): Concatenate two or more strings (var1.concat(var2), var1.concat(var2, var3))
+        - Alternative: + operator
+      - charAt(index): Returns the character at the specified index
+        - Alternative: str[index]
+      - slice (startIndex, endIndex) **: Returns a substring
+        (Ensure startIndex &lt; end Index)
+        - startIndex, endIndex: startIndex to endIndex - 1
+        - startIndex: startIndex to the end of the string
+        - No arguments: Complete string
+        - Alternatives:
+          - substr(startIndex, substringLength): substringLength starting from startIndex
+          - substring(startIndex, endIndex): Similar to slice
+            - negative index will be treated as 0
+            - startIndex > endIndex: index will be swapped
+      - replace(substring, replaceValue): Return a string where substrings are
+        replaced with replaceValue
+          - replaceAll(substring, replaceValue): Replace all occurrences
+--&gt;
+</pre>
