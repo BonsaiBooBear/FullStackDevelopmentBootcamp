@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC');
+
+body {
+  box-sizing: border-box;
+  background-color: #121212;
+  font-family: "Marcellus SC";
+}
+
+/* Container for the entire animation */
+.spider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px; /* Adjust to your logo's size */
+  height: 50px; /* Adjust to your logo's size */
+  margin: 50px auto; /* Center the animation */
+  overflow: visible; /* Allows the trail to extend beyond the container */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.spider-web {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* Style the spider logo */
+.spider-logo {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  animation: spin-and-drop 3s ease-in-out forwards; /* 3-second animation, keeps final state */
+  z-index: 3;
+  filter: drop-shadow(0 0 3px #CCCCCC);
+  transform: translateY(150px) rotate(180deg); /* final resting state */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Define the keyframes for the main spin and drop animation */
+@keyframes spin-and-drop {
+  0% {
+    transform: translateY(0) rotate(0deg); /* Start above the viewport, no spin */
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0px) rotate(180deg); /* At midpoint, logo drops and spins 180 */
+  }
+  80% {
+    transform: translateY(150px) rotate(180deg);
+  }
+  90% {
+    transform: translateY(148px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(150px) rotate(180deg); /* Logo continues to drop past its original position */
+  }
+}
+
+/* Create the trail effect with a pseudo-element */
+.spider-container::after {
+  content: '';
+  position: fixed;
+  left: 28px;
+  width: 2px;
+  background: white; /* Color of the trail */
+  opacity: 1;
+  animation: trail-drop 2.2s ease-in-out forwards;
+  animation-delay: 1.5s;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* glowing effect */
+  z-index: 1;
+}
+
+/* Define keyframes for the trail animation */
+@keyframes trail-drop {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    height: 125px; /* Length of the trail during the drop */
+    opacity: 1;
+  }
+  100% {
+    height: 125px;
+    opacity: 1;
+  }
+}
+
+.navbar {
+  background-color: #780606;
+  font-family: "Cinzel Decorative";
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* glowing effect */
+}
+
+.navbar-brand {
+  margin-left: 65px;
+}
+
+.navbar-header {
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.nav-link {
+  color: #CCCCCC;
+  font-family: "Marcellus SC";
+  font-size: 20px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.nav-link.active {
+  text-decoration: underline 4px;
+  text-decoration-color: rgb(0, 0, 0);
+  text-underline-offset: 8px;
+  font-size: 22px;
+  font-weight: 900;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.custom-header {
+  background-color: #252525;
+  color: #CCCCCC;
+}
+
+.custom-header h1 {
+  font-family: "Cinzel Decorative";
+}
+
+.friend-card {
+  max-width: 600px
+}
+
+.friend-card .mutual-friends {
+  margin-left: 10px;
+}
+
+.friend-card .mutual-friends img {
+  border-radius: 50%;
+  margin-left: -10px;
+}
+
+@media screen and (max-width: 768px) {
+  #category-section {
+    margin-bottom: 1rem;
+  }
+
+  .friend-card {
+    text-align: center;
+    padding-top: 1em;
+    margin: auto;
+    max-width: 300px
+  }
+
+  .friend-card img.rounded-start {
+    width: 100px !important;
+    border-radius: 50% !important;
+  }
+
+  .friend-card .friend-name {
+    flex-direction: column;
+  }
+  
+  .friend-card .card-text {
+    padding-bottom: 0.5em;
+  }
+
+  .friend-card .mutual-friends {
+    padding-bottom: 1em;
+  }
+}
