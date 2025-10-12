@@ -155,16 +155,21 @@ body::before {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.custom-header h1 {
+.custom-header h1, h2, h3, h4, h5, h6 {
   font-family: "Cinzel Decorative";
+}
+
+.custom-header p {
+  font-size: 18px;
 }
 
 .custom-header p.lead {
   color: #780606;
   margin: 1rem;
+  font-size: 24px;
 }
 
-.custom-header button {
+.custom-header a {
   margin: 2rem;
   background-color: #780606;
   color: #CCCCCC;
@@ -172,6 +177,10 @@ body::before {
 }
 
 @media screen and (max-width: 576px) {
+  .spider-logo {
+    filter: drop-shadow(0 0 3px #ffffff);/
+  }
+  
   .navbar-header {
     font-size: 24px;
   }

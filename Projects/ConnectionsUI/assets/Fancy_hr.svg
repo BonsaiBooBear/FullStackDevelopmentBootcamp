@@ -1,0 +1,28 @@
+<svg width="600" height="40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="white-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="white" />
+    </filter>
+  </defs>
+
+  <g filter="url(#white-glow)">
+    <!-- Left line -->
+    <line x1="0" y1="20" x2="250" y2="20" stroke="#780606" stroke-width="1.5" />
+
+    <!-- Web center (centered at x=300) -->
+    <!-- Outer diamond -->
+    <polygon points="250,18 300,20 250,22 200,20" fill="none" stroke="#780606" stroke-width="1.5" />
+    <!-- Inner diamond -->
+    <polygon points="255,18.5 295,20 255,21.5 205,20" fill="none" stroke="#780606" stroke-width="1" />
+    <!-- Radial lines -->
+    <line x1="200" y1="20" x2="300" y2="20" stroke="#780606" stroke-width="1" />
+    <line x1="250" y1="18" x2="250" y2="22" stroke="#780606" stroke-width="1" />
+    <line x1="205" y1="20" x2="255" y2="18.5" stroke="#780606" stroke-width="1" />
+    <line x1="205" y1="20" x2="255" y2="21.5" stroke="#780606" stroke-width="1" />
+    <line x1="295" y1="20" x2="255" y2="18.5" stroke="#780606" stroke-width="1" />
+    <line x1="295" y1="20" x2="255" y2="21.5" stroke="#780606" stroke-width="1" />
+
+    <!-- Right line -->
+    <line x1="300" y1="20" x2="600" y2="20" stroke="#780606" stroke-width="1.5" />
+  </g>
+</svg>
