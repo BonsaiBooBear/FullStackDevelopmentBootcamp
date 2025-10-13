@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web of Widows</title>
+  <title>Open Contracts</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
 </head>
@@ -22,12 +22,20 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="d-flex align-items-end navbar-nav ms-lg-auto">
-          <li class="nav-item me-3">
-            <a class="nav-link" href="secureAccess.html">Secure Access</a>
+        <ul class="d-flex align-items-end navbar-nav me-lg-auto">
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="feed.html">Feed</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="joinTheWeb.html">Join the Web</a>
+            <a class="nav-link active" href="openContracts.html">Open Contracts</a>
+          </li>
+        </ul>
+        <ul class="d-flex align-items-end navbar-nav ms-lg-auto">
+          <li class="nav-item me-3">
+            <a class="nav-link" href="contracts.html">Contracts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dossier.html">Dossier</a>
           </li>
         </ul>
       </div>
@@ -35,20 +43,28 @@
   </nav>
 
   <!------------- MAIN SECTION ------------->
-  <div class="container text-center my-5">
-    <div class="custom-header notLoggedIn rounded p-5">
-      <h1 class="display-3 fw-semibold">Web of Widows</h1>
-      <p class="lead fw-semibold">
-        A network of quiet ties and quiet endings.
-        <img src="assets/Fancy_hr2.svg" alt="fancy horizontal line" class="w-100">
-      </p>
-      <p>
-        Web of Widows is a discreet platform for those operating in the shadows - a place where Black Widows connect to request or offer services of mutual elimination. Whether you're seeking a clean exit or offering one, threads are activated with intent and released without a trace.
-      </p>
-      <p>The web remains. Shifting. Expanding. Waiting.</p>
-      <div class="button-group">
-        <a href="secureAccess.html" class="btn btn-dark btn-lg">Secure Access</a>
-        <a href="joinTheWeb.html" class="btn btn-dark btn-lg">Join the Web</a>
+  <div class="container w-100 my-5">
+    <div class="custom-header rounded p-5">
+      <h1 class="display-2 fw-semibold">Open Contracts</h1>
+      <img src="assets/Fancy_hr2.svg" alt="fancy horizontal line" class="w-100">
+      <ul class="nav nav-tabs" data-bs-theme="dark">
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" aria-current="page" href="#requests">Requests</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#suggestions">Suggestions</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#pending">Pending Hire</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="requests">
+          <h3>Requests</h3>
+
+        </div>
+        <div id="suggestions">
+          <h3>Suggestions</h3>
+
+        </div>
+        <div id="pending">
+          <h3>Pending Hire</h3>
+
+        </div>
       </div>
     </div>
   </div>

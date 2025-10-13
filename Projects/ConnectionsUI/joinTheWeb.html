@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="spider-container me-3">
+    <img src="assets/Spider_web.svg" alt="Spider Web" class="spider-web">
+    <img src="assets/Black_widow.svg" alt="Spider Logo" class="spider-logo">
+  </div>
+  <!------------- NAVBAR SECTION ------------->
+  <nav class="navbar navbar-expand-lg border-bottom border-body">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <h1 class="navbar-header">Web of Widows</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="d-flex align-items-end navbar-nav ms-lg-auto">
+          <li class="nav-item me-3">
+            <a class="nav-link" href="secureAccess.html">Secure Access</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="joinTheWeb.html">Join the Web</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!------------- MAIN SECTION ------------->
+  <div class="container my-5">
+    <div class="custom-header notLoggedIn rounded p-2 row">
+      <h1 class="display-4 text-center fw-semibold pt-5 px-5">Join the Web<br>
+      <img src="assets/Fancy_hr2.svg" alt="fancy horizontal line" class="w-100"></h1>
+      <form action="dossier.html">
+        <div class="col-md-10 offset-md-1">
+          <div class="row">
+            <div class="col-6 mb-4">
+              <label for="firstName" class="form-label fs-5">First Name</label>
+              <br><input type="text" class="form-control" placeholder="First Name" id="firstName" required>
+            </div>
+            <div class="col-6 mb-4">
+              <label for="firstName" class="form-label fs-5">Last Name</label>
+              <br><input type="text" class="form-control" placeholder="Last Name" id="lastName" required>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="firstName" class="form-label fs-5">Codename</label>
+            <br><input type="text" class="form-control" placeholder="Codename"  id="codename"required>
+          </div>
+          <div class="mb-4">
+            <label for="firstName" class="form-label fs-5">Access Token</label><span class="redText fs-2 ms-2">*</span>
+            <br><input type="password" class="form-control" placeholder="Access Token" id="accessToken" required>
+            <table>
+              <tr>
+                <td class="redText fs-2">*</td>
+                <td class="ms-1 disclaimer pt-3">Text "WIDOW" to 94363 from burner phone for a unique Access Token.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="mb-5">
+            <label for="confirmAccessToken" class="form-label fs-5">Confirm Access Token</label>
+            <br><input type="password" class="form-control" placeholder="Confirm Access Token" id="confirmAccessToken" required>
+          </div>
+          <div class="mb-2">
+            <input type="checkbox" class="form-check-input me-1" id="agreeCheck" required>
+            <label class="form-check-label disclaimer d-inline" for="agreeCheck">I accept the binding threads outlined in <a href="#" data-bs-toggle="modal" data-bs-target="#widowDecree">The Widow Decree</a>.</label>
+          </div>
+        </div>
+        <div class="text-center">
+          <input type="submit" value="Enter" class="btn btn-lg px-5">
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="widowDecree" tabindex="-1" aria-labelledby="widowDecreeLabel" aria-hidden="true" data-bs-theme="dark">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="widowDecreeLabel">Widow Decree</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h2>Widow Decree</h2>
+          <p><strong>Effective Date:</strong> Upon first interaction with the site.</p>
+          <p>By accessing or using this website, you agree to the following terms and conditions. These terms are subject to change without notice, and it is your responsibility to review them periodically.</p>
+
+          <h5>1. Eligibility</h5>
+          <p>Users must be at least 18 years of age and possess the capacity to enter into binding agreements. By using this site, you affirm that you meet these criteria.</p>
+
+          <h5>2. Dossier Creation</h5>
+          <p>Upon registration, a dossier (profile) is created containing your preferences, interactions, and any contractual engagements. This dossier is considered confidential and is accessible only to you and authorized entities within the system.</p>
+
+          <h5>3. Contractual Engagements</h5>
+          <p>Any agreements, missions, or tasks initiated through this site are considered binding until completion, cancellation, or expiration. The system reserves the right to modify, suspend, or terminate any engagement at its discretion.</p>
+
+          <h5>4. Confidentiality & Conduct</h5>
+          <p>Users agree not to disclose sensitive information obtained through this site. This includes, but is not limited to, mission details, system architecture, user dossiers, and internal communications.</p>
+          <p>Violation of this clause may result in <strong>termination in more ways than one</strong> - including immediate removal from the system, permanent dossier deletion, and forfeiture of all privileges. The system does not tolerate breaches of trust.</p>
+
+          <h5>5. The Widow Clause</h5>
+          <p>In the event of prolonged silence, abandonment, or intentional disappearance, the system shall invoke <strong>The Widow Clause</strong>.</p>
+          <ul>
+            <li>All active contracts shall be <em>nullified without appeal</em></li>
+            <li>The user's dossier - including preferences, history, and affiliations - shall be <em>permanently erased</em></li>
+            <li>Any pending entitlements, rewards, or privileges shall be <em>forfeited</em></li>
+            <li>The user shall be considered <em>a ghost in the system</em>, and re-entry will require full re-initiation</li>
+          </ul>
+          <p>Once invoked, The Widow Clause is <strong>irrevocable</strong>. The web forgets.</p>
+
+          <h5>6. Termination</h5>
+          <p>The site reserves the right to suspend or terminate access at any time, for any reason, including but not limited to breach of these terms, suspicious activity, or inactivity as outlined above.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</body>
+</html>
