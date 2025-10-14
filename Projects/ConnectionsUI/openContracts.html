@@ -23,19 +23,19 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="d-flex align-items-end navbar-nav me-lg-auto">
-          <li class="nav-item mx-3">
-            <a class="nav-link" href="feed.html">Feed</a>
+          <li class="nav-item ms-5">
+            <a class="nav-link active" href="openContracts.html">Marks</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="openContracts.html">Open Contracts</a>
+            <a class="nav-link" href="requestHit.html">Request Hit</a>
           </li>
         </ul>
         <ul class="d-flex align-items-end navbar-nav ms-lg-auto">
           <li class="nav-item me-3">
-            <a class="nav-link" href="contracts.html">Contracts</a>
+            <a class="nav-link" href="contracts.html">Contacts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="dossier.html">Dossier</a>
+            <a class="nav-link" href="secureAccess.html">Sign Out</a>
           </li>
         </ul>
       </div>
@@ -43,32 +43,216 @@
   </nav>
 
   <!------------- MAIN SECTION ------------->
-  <div class="container w-100 my-5">
-    <div class="custom-header rounded p-5">
-      <h1 class="display-2 fw-semibold">Open Contracts</h1>
-      <img src="assets/Fancy_hr2.svg" alt="fancy horizontal line" class="w-100">
-      <ul class="nav nav-tabs" data-bs-theme="dark">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" aria-current="page" href="#requests">Requests</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#suggestions">Suggestions</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#pending">Pending Hire</a></li>
-      </ul>
-      <div class="tab-content">
-        <div id="requests">
-          <h3>Requests</h3>
-
+  <div class="container bgRed rounded my-5" id="contractBackground">
+    <div class="custom-header rounded p-5" id="contractPage">
+      <h1 class="display-3 fw-semibold text-center">Mark of the Widow</h1>
+      <div class="nav nav-tabs" id="contractTab" role="tablist">
+        <div class="nav-item" role="presentation">
+          <button class="nav-link active" id="requests-tab" data-bs-toggle="tab" data-bs-target="#requests-tab-pane" type="button" role="tab" aria-controls="requests-tab-pane" aria-selected="true">Job Offers</button>
         </div>
-        <div id="suggestions">
-          <h3>Suggestions</h3>
-
+        <div class="nav-item" role="presentation">
+          <button class="nav-link" id="suggestions-tab" data-bs-toggle="tab" data-bs-target="#suggestions-tab-pane" type="button" role="tab" aria-controls="suggestions-tab-pane" aria-selected="false">Suggestions</button>
         </div>
-        <div id="pending">
-          <h3>Pending Hire</h3>
-
+        <div class="nav-item" role="presentation">
+          <button class="nav-link" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending-tab-pane" type="button" role="tab" aria-controls="pending-tab-pane" aria-selected="false">Pending Counters</button>
+        </div>
+      </div>
+      <div class="tab-content bgRed p-4" id="contractTabContent">
+        <div class="tab-pane fade show active" id="requests-tab-pane" role="tabpanel" aria-labelledby="requests-tab" tabindex="0">
+          <h3>Pending Acceptance</h3>
+          <div class="card mb-3 contract-card">
+            <div class="row g-0">
+              <div class="col-md-4 target-details">
+                <img src="./assets/RobertLee.PNG" class="img-fluid rounded-top w-100">
+                <p class="my-4 mx-2 fw-light fs-6">
+                  <span class="fw-semibold">Name:</span> Robert Lee
+                  <br><span class="fw-semibold">Gender:</span> Male
+                  <br><span class="fw-semibold">Age:</span> 24
+                  <br><span class="fw-semibold">Deadline:</span> 2 Months
+                </p>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body d-flex flex-column justify-content-between h-100">
+                  <div>
+                    <div class="d-flex justify-content-between accomplice-name">
+                      <h5><a href="#"><img src="./assets/KimberlyLee.PNG" width="30" height="30" class="rounded-circle me-1">Young_Hungry_Girl4456</a></h5>
+                      <span><small class="text-body-secondary">1d ago</small></span>
+                    </div>
+                    <div class="associate-accomplices">
+                      <a href="#"><img src="./assets/TanyaCopeland.PNG" width="30" height="30"></a>
+                      <a href="#"><img src="./assets/Female1.PNG" width="30" height="30"></a>
+                      <a href="#"><img src="./assets/Female2.PNG" width="30" height="30"></a>
+                      <span class="text-muted">+5 Associate Accomplices</span>
+                    </div>
+                    <p class="fw-bolder mt-4">Offer: <span class="greenText me-3">$40,000</span>[<span class="negTerms greenText fs-6">Negotiable</span>]<br>
+                      <small class="text-body-secondary">10% of Life Insurance Policy (LIP)</small></p>
+                    <p class="card-text lead fs-5 mx-auto">Signed Prenup. Void if infidelity can be proven. Photographic evidence of infidelity needed for LIP, then request death by natural causes.</p>
+                  </div>
+                  <div class="d-flex justify-content-evenly">
+                    <button type="button" class="btn m-1">Accept Terms</button>
+                    <button type="button" class="btn m-1">Counter</button>
+                    <button type="button" class="btn m-1">Decline</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 contract-card">
+            <div class="row g-0">
+              <div class="col-md-4 target-details">
+                <img src="./assets/JamesCopeland.PNG" class="img-fluid rounded-top w-100">
+                <p class="my-4 mx-2 fw-light fs-6">
+                  <span class="fw-semibold">Name:</span> James Sanders
+                  <br><span class="fw-semibold">Gender:</span> Male
+                  <br><span class="fw-semibold">Age:</span> 48
+                  <br><span class="fw-semibold">Deadline:</span> 3 Weeks
+                </p>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body d-flex flex-column justify-content-between h-100">
+                  <div>
+                    <div class="d-flex justify-content-between accomplice-name">
+                      <h5><a href="#"><img src="./assets/TanyaCopeland.PNG" width="30" height="30" class="rounded-circle me-1">Stepford_Widow_58966</a></h5>
+                      <span><small class="text-body-secondary">3d ago</small></span>
+                    </div>
+                    <div class="associate-accomplices">
+                      <a href="#"><img src="https://reqres.in/img/faces/3-image.jpg" width="30" height="30"></a>
+                      <a href="#"><img src="https://reqres.in/img/faces/2-image.jpg" width="30" height="30"></a>
+                      <a href="#"><img src="https://reqres.in/img/faces/7-image.jpg" width="30" height="30"></a>
+                      <span class="text-muted">+5 Associate Accomplices</span>
+                    </div>
+                    <p class="fw-bolder mt-4">Offer: <span class="greenText me-3">$65,000</span>[<span class="negTerms redText fs-6">Non-Negotiable</span>]<br>
+                      <small class="text-body-secondary">6% of Life Insurance Policy (LIP)</small></p>
+                    <p class="card-text lead fs-5 mx-auto">Husband travels out of town for work in 3 weeks. Need "accident" to happen during trip. Must coordinate to establish alibi for avoiding suspicion from the family.</p>
+                  </div>
+                  <div class="d-flex justify-content-evenly">
+                    <button type="button" class="btn m-1">Accept Terms</button>
+                    <button type="button" class="btn m-1">Decline</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="suggestions-tab-pane" role="tabpanel" aria-labelledby="suggestions-tab" tabindex="0">
+          <h3>Open Contracts</h3>
+          <div class="card mb-3 contract-card">
+            <div class="row g-0">
+              <div class="col-md-4 target-details">
+                <img src="./assets/GregoryHawkins.PNG" class="img-fluid rounded-top w-100">
+                <p class="my-4 mx-2 fw-light fs-6">
+                  <span class="fw-semibold">Name:</span> Gregory Hawkins
+                  <br><span class="fw-semibold">Gender:</span> Male
+                  <br><span class="fw-semibold">Age:</span> 57
+                  <br><span class="fw-semibold">Deadline:</span> 6 Months
+                </p>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body d-flex flex-column justify-content-between h-100">
+                  <div>
+                    <div class="d-flex justify-content-between accomplice-name">
+                      <h5><a href="#"><img src="./assets/Female1.PNG" width="30" height="30" class="rounded-circle me-1">Sick_and_Tired_649</a></h5>
+                      <span><small class="text-body-secondary">3min ago</small></span>
+                    </div>
+                    <div class="associate-accomplices">
+                      <a href="#"><img src="./assets/KimberlyLee.PNG" width="30" height="30"></a>
+                      <a href="#"><img src="https://reqres.in/img/faces/2-image.jpg" width="30" height="30"></a>
+                      <a href="#"><img src="./assets/TanyaCopeland.PNG" width="30" height="30"></a>
+                      <span class="text-muted">+5 Associate Accomplices</span>
+                    </div>
+                    <p class="fw-bolder mt-4">Offer: <span class="greenText me-3">$500,000</span>[<span class="negTerms redText fs-6">Non-Negotiable</span>]<br>
+                      <small class="text-body-secondary">12% of Life Insurance Policy (LIP)</small></p>
+                    <p class="card-text lead fs-5 mx-auto">Husband took out an LIP after a year of nagging. The long-game on this one. Working on weeding the kids out of the policy, but want to wait another 6 months to avoid suspicion.</p>
+                  </div>
+                  <div class="d-flex justify-content-evenly">
+                    <button type="button" class="btn m-1">Accept Terms</button>
+                    <button type="button" class="btn m-1">Counter</button>
+                    <button type="button" class="btn m-1">Ignore</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 contract-card">
+            <div class="row g-0">
+              <div class="col-md-4 target-details">
+                <img src="./assets/JaneOwens.PNG" class="img-fluid rounded-top w-100">
+                <p class="my-4 mx-2 fw-light fs-6">
+                  <span class="fw-semibold">Name:</span> Jane Owens
+                  <br><span class="fw-semibold">Gender:</span> Female
+                  <br><span class="fw-semibold">Age:</span> 56
+                  <br><span class="fw-semibold">Deadline:</span> 3 Days
+                </p>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body d-flex flex-column justify-content-between h-100">
+                  <div>
+                    <div class="d-flex justify-content-between accomplice-name">
+                      <h5><a href="#"><img src="./assets/KellyOwens.PNG" width="30" height="30" class="rounded-circle me-1">Lover_Scorned_248</a></h5>
+                      <span><small class="text-body-secondary">1min ago</small></span>
+                    </div>
+                    <div class="associate-accomplices">
+                      <a href="#"><img src="./assets/Female2.PNG" width="30" height="30"></a>
+                      <a href="#"><img src="./assets/KimberlyLee.PNG" width="30" height="30"></a>
+                      <a href="#"><img src="./assets/JessieWhite.PNG" width="30" height="30"></a>
+                      <span class="text-muted">+5 Associate Accomplices</span>
+                    </div>
+                    <p class="fw-bolder mt-4">Offer: <span class="greenText me-3">$30,000</span>[<span class="negTerms greenText fs-6">Negotiable</span>]<br>
+                      <small class="text-body-secondary">8% of Life Insurance Policy (LIP)</small></p>
+                    <p class="card-text lead fs-5 mx-auto">Married last week. Found another target on Honeymoon and have to move fast to lock it in. Current wife has heart issues, so hear-attack symptoms preferred.</p>
+                  </div>
+                  <div class="d-flex justify-content-evenly">
+                    <button type="button" class="btn m-1">Accept Terms</button>
+                    <button type="button" class="btn m-1">Counter</button>
+                    <button type="button" class="btn m-1">Ignore</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pending-tab-pane" role="tabpanel" aria-labelledby="pending-tab" tabindex="0">
+          <h3>Pending Counter Offers</h3>
+          <div class="card mb-3 contract-card">
+            <div class="row g-0">
+              <div class="col-md-4 target-details">
+                <img src="./assets/AmeliaWhite.PNG" class="img-fluid rounded-top w-100">
+                <p class="my-4 mx-2 fw-light fs-6">
+                  <span class="fw-semibold">Name:</span> Amelia White
+                  <br><span class="fw-semibold">Gender:</span> Female
+                  <br><span class="fw-semibold">Age:</span> 34
+                  <br><span class="fw-semibold">Deadline:</span> 8 Weeks
+                </p>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body d-flex flex-column justify-content-between h-100">
+                  <div>
+                    <div class="d-flex justify-content-between accomplice-name">
+                      <h5><a href="#"><img src="./assets/JessieWhite.PNG" width="30" height="30" class="rounded-circle me-1">Young_Wild_FREE_68</a></h5>
+                      <span><small class="text-body-secondary">1w ago</small></span>
+                    </div>
+                    <div class="associate-accomplices">
+                      <a href="#"><img src="./assets/Female2.PNG" width="30" height="30"></a>
+                      <a href="#"><img src="./assets/AmeliaWhite.PNG" width="30" height="30"></a>
+                      <a href="#"><img src="./assets/JessieWhite.PNG" width="30" height="30"></a>
+                      <span class="text-muted">+5 Associate Accomplices</span>
+                    </div>
+                    <p class="fw-bolder mt-4">Offer: <span class="greenText me-3">$30,000</span>[<span class="negTerms greenText fs-6">Negotiable</span>]<br>
+                      <small class="text-body-secondary">8% of Life Insurance Policy (LIP)</small></p>
+                    <p class="card-text lead fs-5 mx-auto">I'm going on a trip to the Bahamas with a group of friends. My wife will be going rock-climbing in the mountains while I'm away. I keep telling her to be careful free-climbing. Something could happen...</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text-muted">Status: Unread</p>
+                    <button type="button" class="btn m-1">Retract</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </body>
