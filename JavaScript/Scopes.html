@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scopes</title>
+</head>
+<body>
+  <h1>Scopes</h1>
+  <script>
+    // var x = 10 //Global Scope
+
+    // if (10 > 5) {
+    //   console.log(x); //Block Scope
+    // }
+
+    // console.log(x);
+
+    // var age = 35
+
+    // if (10 > 5) {
+    //   var age = 50
+    //   console.log(age);
+    // }
+
+    // console.log(age);
+
+    /* --------------------------------------*/
+    // let student = "Mark"
+    
+    // if (100 > 50) {
+    //   let student = "Ananya"
+    //   console.log(student);
+    // }
+
+    // console.log(student);
+
+    // var x = 10
+    // x = 100
+    // console.log(x);
+
+    // let x = 10
+    // let x = 100
+    // console.log(x);
+
+    // let x = 10
+    // x = 100
+    // console.log(x);
+
+    // const x = 10
+    // x = 20
+
+    /* --------------------------------------*/
+    // var name = "Mark"
+    // if(true){
+    //   var name = "Sonal"
+    // }
+    // console.log(name + name)
+    // Output:
+    // SonalSonal
+
+    // let name = "Mark"
+    // if(true){
+    //   let name = "Sonal"
+    // }
+    // console.log(name + name)
+    // Output:
+    // MarkMark
+
+    // let name = "Mark"
+    // if(true){
+    //   let name = "Sonal"
+    //   console.log(name + name)
+    // }
+    // Output:
+    // SonalSonal
+    
+    // const name = "Mark"
+    // if(true){
+    //   const name = "Sonal"
+    //   console.log(name + name)
+    // }
+    // console.log(name + name)
+    // Output:
+    // SonalSonal
+    // MarkMark
+
+    // const name = "Mark"
+    // if(true){
+    //   console.log(name + name)
+    // }
+    // const name = "Sonal"
+    // console.log(name + name)
+    // Output:
+    // Uncaught SyntaxError
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Scope: Space where the variable can be accessed
+   - Global Scope: Variable can be accessed anywhere in the file
+   - Function Scope: Variable can only be accessed within the function
+   - Block Scope ({}): Variable can only be accessed within the block
+
+  # Declare variables
+    - var, let, const
+    - ES6: ECMAScript 6 [2015] (versioning for JavaScript)
+      - let, const (Block Scope)
+
+    - var: Variables
+      - Can be re-declared
+      - Can be re-assigned
+      - Function Scope
+    - let: Variables
+      - Cannot be re-declared
+      - Can be re-assigned
+      - Block Scope
+    - const: Constants
+      - Cannot be re-declared
+      - Cannot be re-assigned
+      - Block Scope
+
+  # Future:
+    - Function Scope
+*/
+</pre>
