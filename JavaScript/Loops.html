@@ -61,7 +61,79 @@
     //   }
     //   x++
     // }
-    // Ex
+    // Example: Print all characters of a string
+    // var student1 = "Malvin"
+    // var i = 0
+    // while(i < student1.length) {
+    //   console.log(student1[i]);
+    //   i++
+    // }
+
+    /* -------------------------------------------*/
+    // Example 1: Print first 10 numbers
+    // var x = 11
+    // do {
+    //   console.log(x)
+    //   x++
+    // } while (x <= 10)
+
+    /* -------------------------------------------*/
+    // Example 1: Print first 10 numbers
+    // for (var x = 1; x <= 10; x++) {
+    //   console.log(x);
+    // }
+
+    // Example 2: Print all characters of a string
+    // var student1 = "Malvin"
+    // for (var i = 0; i < student1.length; i++) {
+    //   console.log(student1[i]);
+    // }
+
+    // Example 3: Evaluate all characters of a string and print whether it is a vowel, consonant, or none
+    // METHOD 1:
+    // var student1 = "Luis O'Carter"
+    // student1 = student1.toLowerCase()
+    // for (i = 0; i < student1.length; i++){
+    //   if (student1[i] == "a" || student1[i] == "e" || student1[i] == "i" || student1[i] == "o" || student1[i] == "u") {
+    //     console.log(student1[i], "VOWEL")
+    //   } else if (student1[i] == " " || student1[i] == "'") {
+    //     console.log(student1[i], "NONE")
+    //   } else {
+    //     console.log(student1[i], "CONSONANT")
+    //   }
+    // }
+
+    // METHOD 2:
+    // var student1 = "Luis O'Carter"
+    // student1 = student1.toLowerCase()
+    // for (i = 0; i < student1.length; i++){
+    //   switch(student1[i]) {
+    //     case "a":
+    //       console.log(student1[i], "VOWEL")
+    //       break
+    //     case "e":
+    //       console.log(student1[i], "VOWEL")
+    //       break
+    //     case "i":
+    //       console.log(student1[i], "VOWEL")
+    //       break
+    //     case "o":
+    //       console.log(student1[i], "VOWEL")
+    //       break
+    //     case "u":
+    //       console.log(student1[i], "VOWEL")
+    //       break
+    //     case "":
+    //       console.log(student1[i], "NONE")
+    //       break
+    //     case "'":
+    //       console.log(student1[i], "NONE")
+    //       break
+    //     default:
+    //       console.log(student1[i], "CONSONANT")
+    //       break
+    //   }
+    // }
   </script>
 </body>
 </html>
@@ -85,12 +157,28 @@
       - Increment/Decrement loop variable
 
     Types of loops
-    1. 'while' loop *
+    1. while loop *
       - Syntax:
         // initialization
         while (condition) {
           // loop logic
           // increment/decrement loop variable
         }
+    2. do while *
+      - Syntax:
+        // initialization
+        do {
+          // loop logic
+          // increment/decrement loop variable
+        } while (condition)
+      - Similar to while loop, but the condition is not checked for the first iteration.
+    3. for loop ***
+      - Syntax:
+      for (initialization; condition; increment/decrement) {
+        // loop logic
+      }
+
+  # Future:
+      - for of, for in
 */
 </pre>
