@@ -12,7 +12,7 @@
     // let marks1 = 85
     // let marks2 = 92
     // let marks3 = 87
-    let marks = [85, 92, 87, 97, 99]
+    // let marks = [85, 92, 87, 97, 99]
 
     // let arr1 = [10, 20, 30, 40, 50]
     // let arr2 = ['Rick', 'Kelly', 'Ashley']
@@ -23,13 +23,90 @@
     // console.log(arr1.length) // 5
     // console.log(arr1[arr1.length-1]) // arr1[4] = 50
 
-    let arr1 = [10, 20, 30, 40, 50]
+    // let arr1 = [10, 20, 30, 40, 50]
     // arr1[2] = 100
     // arr1[5] = 100 // Calculate arr.length - leaves room for error
     // arr1[arr1.length] = 100
     // arr1[arr1.length] = 200
     // arr1[arr1.length] = 300
     // console.log(arr1)
+
+    // let arr = [10, 20, 30, 40, 50]
+    // for(let i = 0; i < arr.length; i++) {
+    //   console.log(arr[i])
+    // }
+
+    // let arr = [[2, 4], [3, 5]]
+    // for(let i = 0; i < arr.length; i++) {
+    //   console.log(arr[i])
+    // }
+    // console.log(arr[0][1])
+
+    /* ----------------------------------------*/
+    // let students = ['Yaritza', 'Rebecca', 'Hayden', 'Anne', 'Parker', 'Anne', 'Rebecca']
+    // console.log(students.includes('Anne'))
+    // console.log(students.includes('Anna'))
+    // console.log(students.indexOf('Rebecca'))
+    // console.log(students.indexOf('Jeff'))
+    // console.log(students.lastIndexOf('Anne'))
+
+    // #Q: Find duplicates in an array
+    // for (let i = 0; i < students.length; i++) {
+    //   let firstIndex = students.indexOf(students[i])
+    //   let lastIndex = students.lastIndexOf(students[i])
+
+    //   if(firstIndex != lastIndex) {
+    //     console.log('Duplicate detected: ', students[i])
+    //   }
+    // }
+
+    // let students = ['Yaritza', 'Rebecca', 'Hayden', 'Anne', 'Parker']
+    // let result = students.push('Sonal')
+    // console.log(result)
+    // console.log(students)
+    // students.pop() // Parker
+    // students.pop() // Anne
+    // const result = students.pop()
+    // console.log(result) //Hayden
+
+    // let students = ['Yaritza', 'Rebecca', 'Hayden', 'Anne', 'Parker']
+    // students.unshift('Kelly')
+    // students.unshift('Luis')
+    // students.unshift('Kelly', 'Luis', 'Mark')
+    // students.shift() // Yaritza
+    // students.shift() // Rebecca
+    // console.log(students)
+
+    // let arr1 = [10, 20, 30]
+    // let arr2 = [15, 25, 35]
+    // let arr3 = [100, 200, 300]
+    // console.log(arr1.concat(arr2, arr3))
+    // console.log(arr1) // Unchanged
+
+    // let students = ['Yaritza', 'Rebecca', 'Hayden', 'Anne', 'Parker']
+    // console.log(students.slice(1, 3))
+    // console.log(students.slice(2, 3))
+    // console.log(students.slice(3, 3))
+    // console.log(students.slice(3)) // startIndex to end of array
+    // console.log(students.slice()) // returns entire array
+
+    // let students = ['Yaritza', 'Rebecca', 'Hayden', 'Anne', 'Parker']
+    // students.reverse()
+    // console.log(students)
+
+    // let arr1 = [10, 20, 30]
+    // console.log(arr1.join())
+    // console.log(arr1.join('-'))
+    // console.log(arr1.join(' | '))
+    // console.log(arr1.join(''))
+
+    // let fruit = 'Banana'
+    // console.log(fruit.split())
+    // console.log(fruit.split(''))
+    // console.log(fruit.split('a'))
+
+    // let students = "Ashley-Jeff-Sonal"
+    // console.log(students.split('-'))
   </script>
 </body>
 </html>
@@ -51,5 +128,59 @@
         - Syntax: arr[index] = newValue
         - Append element to the end of the array
           - arr[arr.length] = newValue
+      - Iterate an array (using loops concept)
+        - Syntax:
+          for (let i=0; i &lt; arr.length, i++) {
+            console.log(arr[i])
+          }
+      - Multi-dimensional array: Nested array
+        - Example: arr1 = [[2, 4], [3, 5]]
+      - Properties:
+        - length: Total number of elements in the array
+      - Methods
+        - indexOf() **: Returns the index of the FIRST occurrence of the element in the array, else returns -1
+        - lastIndexOf(): Returns the index of the LAST occurrence of the element in the array, else returns -1
+        - includes() **: Returns true if the element exists, else returns false (case sensitive)
+        - push(newElement) **: Add a new element to the end of the array
+          - Will update the original array
+          - Return the updated length of the array
+        - pop() **: Remove the last element from the array
+          - Will update the original array
+          - Return the removed element
+        - unshift(newElement): Add a new element to the start of the array
+          - Will update the original array
+          - Return the updated length of the array
+        - shift(): Remove the first element of the the array
+          - Will update the original array
+          - Return the removed element
+        - concat(): Merge two arrays
+          - Will not update the original array
+          - Returns the merged array
+        - slice(startIndex, endIndex) **: Returns a sub array
+        (Ensure startIndex &lt; end Index)
+          - startIndex, endIndex: startIndex to endIndex - 1
+          - startIndex: startIndex to the end of the array
+          - No arguments: Complete array
+        - reverse(): Reverse the order of array elements
+          - Will update the original array
+          - Return the reversed array
+        - join(): Joint the array elements to form a string (Array -> String)
+          - Will not update the original array
+          - Returns the joined string
+          - Notes:
+            - No arguments: Join elements separated by comma
+            - Separator: Join elements separated by the separator
+
+      - Additional Notes:
+        - In JavaScript:
+          - Strings are immutable
+          - Arrays are mutable
+        - String -> Array
+          - split(): Split a string to form elements of an array
+          - Arguments:
+            - No arguments: Returns an array with complete string as one element
+            - Empty string: Returns an array with individual characters as elements
+            - Separator: Returns an array with strings as elements, which were split using the separator
+
 */
 </pre>
