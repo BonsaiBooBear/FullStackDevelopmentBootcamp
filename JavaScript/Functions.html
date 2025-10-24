@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Functions</title>
+</head>
+<body>
+  <h1>Functions</h1>
+  <script>
+    // function sayHi() {
+    //   console.log('Hi')
+    // }
+    // sayHi()
+    // sayHi()
+    // sayHi()
+
+    // function sayHi() {
+    //   console.log('START')
+    //   let num1 = 10
+    //   let num2 = 20
+    //   let sum = num1 + num2
+    //   console.log('Sum: ', sum)
+    //   console.log('END')
+    // }
+    // sayHi()
+    // sayHi()
+    // sayHi()
+
+    /* --------------------------- */
+    // function abc() {
+    //   console.log('ABC')
+    // }
+    
+    // const abc = function () {
+    //   console.log('ABC')
+    // }
+
+    // abc()
+    // abc()
+    // abc()
+
+    /* --------------------------- */
+    /* # Example 1: Create a function to list the recipe steps for making a pizza
+      1. Prepare the pizza base
+      2. Add pizza sauce
+      3. Add cheese
+      4. Add toppings
+      5. Bake the pizza
+    */
+    // function pizzaRecipe () {
+    //   console.log('1. Prepare the pizza base')
+    //   console.log('2. Add pizza sauce')
+    //   console.log('3. Add cheese')
+    //   console.log('4. Add toppings')
+    //   console.log('5. Bake the pizza')
+    // }
+
+    // pizzaRecipe()
+
+    // console.log('Some other code...')
+
+    // pizzaRecipe()
+
+    /* --------------------------- */
+    // # Example 2: Create a function to find the sum of two numbers
+    // function sum() {
+    //   let num1 = 10
+    //   let num2 = 20
+    //   console.log(num1 + num2)
+    // }
+
+    // sum()
+
+    // function sum(num1, num2) { // Parameters
+    //   console.log(num1 + num2)
+    // }
+
+    // sum(10, 20) // Arguments
+    // sum(3784783984, 34709359)
+    // sum(-15, 12)
+
+    /* --------------------------- */
+    // // # Example 3: Create a function to display the full name of the user if firstName and lastName are provided
+    // function printFullName(firstName, lastName) {
+    //   console.log(firstName + ' ' + lastName)
+    // }
+
+    // printFullName('Hayden', 'Thompson')
+    // printFullName('Kelly', 'Cook')
+    // printFullName('HAppy', 'Singh')
+
+    /* --------------------------- */
+    // # Example 4: Create a function which takes a number as a parameter and logs whether it is an even or odd number
+    // function evenOrOdd(num) {
+    //   if(num % 2) { // Remainder is 1 after dividing by 2, Truthy
+    //     console.log(num + ' is Odd')
+    //   } else { // Remainder is 0 after dividing by 2, Falsy
+    //     console.log(num + ' is Even')
+    //   }
+    // }
+
+    // function evenOrOdd(num) {
+    //   let num1 = Number(num)
+    //   if (isNaN(num1)) {
+    //     console.log('Invalid Input')
+    //   } else {
+    //     console.log(num % 2 ? num + ' is Odd ' : num + ' is Even')
+    //   }
+    // }
+
+    // evenOrOdd(16)
+    // evenOrOdd(15)
+    // evenOrOdd('22')
+    // evenOrOdd('Hello')
+
+    /* --------------------------- */
+    // function abc() {
+    //   console.log('START')
+    //   return
+    //   console.log('FUNCTIONS')
+    //   console.log('END')
+    // }
+
+    // abc()
+
+    // function add(num1, num2) {
+    //   const sum = num1 + num2
+    //   return sum
+    // }
+
+    // console.log(add(30, 50))
+
+    // const result = add(30, 50)
+    // console.log(result)
+
+    // function add(num1, num2) {
+    //   console.log(num1 + num2)
+    // }
+
+    // add(20, 80)
+
+    // console.log(num1) // Error: Does not exist outside of scope
+
+
+    /* --------------------------- */
+    // # Example 5: Create a function which takes a number as a parameter and checks whether it is a prime number or not
+    // function checkPrime(num) {
+    //   for(let i = 2; i < num; i++) {
+    //     if (num % i == 0) {
+    //       console.log(num + ' is NOT Prime')
+    //     } else {
+    //       console.log(num + ' is Prime')
+    //     }
+    //   }
+    // }
+
+    // function checkPrime(num) {
+    //   if (num < 2) {
+    //     console.log('Invalid number')
+    //     return
+    //   }
+    //   for(let i = 2; i < num; i++) {
+    //     if (num % i == 0) {
+    //       console.log(num + ' is NOT a Prime Number')
+    //       return
+    //     }
+    //   }
+    //   console.log(num +' is a Prime Number')
+    // }
+
+    // checkPrime(5)
+    // checkPrime(6)
+    // checkPrime(1)
+
+    /* --------------------------- */
+    // # Example 6: Create a function which takes a number as a parameter and returns the factorial of that number
+    // function factorial(num) {
+    //   let fact = 1
+    //   for (let i = num; i >= 2; i--) {
+    //     fact = fact * i
+    //   }
+    //   return fact
+    // }
+
+    // console.log(factorial(6))
+
+    // function factorial(num) {
+    //   let fact = 1
+    //   for (let i = 2; i <= num; i++) {
+    //     fact = fact * i
+    //   }
+    //   return fact
+    // }
+
+    // console.log(factorial(6))
+
+    /* --------------------------- */
+    // # Example 7: Create a function which takes two numbers as parameters and returns the average of the two numbers
+    // function getAverage(num1, num2) {
+    //   return (num1+num2)/2
+    // }
+
+    // function getAverage(num1, num2) {
+    //   let avg = (num1 + num2) / 2
+    //   return avg
+    // }
+
+    // console.log(getAverage(11,14))
+
+    /* --------------------------- */
+    // # Example 8: Create a function which takes three numbers as parameters and returns the largest number amongst the three (Assume all three numbers unequal)
+    // function checkLargest(num1, num2, num3) {
+    //   if (num1 > num2 && num1 > num3) {
+    //     return num1
+    //   } else if(num2 > num1 && num2 > num3) {
+    //     return num2
+    //   } else {
+    //     return num3
+    //   }
+    // }
+
+    // function checkLargest(num1, num2, num3) {
+    //   return Math.max(num1, num2, num3)
+    // }
+
+    // let result = checkLargest(25,75,50)
+    // console.log(result, ' is the largest number')
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Functions:
+    - A set/block of code which is intended to perform a particular task
+    - Function can be executed as many times as needed
+    - Advantages of functions:
+      - Avoid repeated code (redundancy)
+        - DRY (Don't Repeat Yourself) Principle
+      - Modular code (Organized code)
+
+    - For any function to be executed in JS, it needs two steps:
+      - Declaration
+      - Invocation (Calling the function)
+
+    - Types of functions:
+      - Standard function
+      - Anonymous function
+        - Does not have a name
+        - Used as a function expression
+
+    - Syntax:
+      - Declaration
+        - STANDARD FUNCTION
+          function name () {
+            // code
+          }
+        - ANONYMOUS FUNCTION
+          const name = function () {
+            // code
+          }
+      - Invocation
+        name()
+
+    - Parameters and arguments:
+      - Can make a function dynamic (For different Input, you get different Output)
+      - Parameters: Function variables (Values expected by the function)
+      - Arguments: Actual values passed for function parameters uring invocation
+      - Syntax:
+          - Declaration:
+            function func1(a, b) { // Parameters
+              // code
+            }
+          - Invocation:
+            func1(a, b) // Arguments
+    
+    - 'return' keyword:
+      - Return a value at the place where the function was invoked
+      - Terminates the function execution at the point where the return keyword was used
+
+*/
+</pre>
