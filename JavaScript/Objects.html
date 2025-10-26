@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Objects</title>
+</head>
+<body>
+  <h1>Objects</h1>
+  <script>
+    // const group1 = ['Dee', 'Abdiel', 'Sonal']
+    // const sylviaName = 'Sylvia'
+    // const sylviaCity = 'XYZ'
+    // const sylviaCountry = 'USA'
+    // const sylviaBatch = 'Batch2'
+
+    // const sylviaDetails = ['Sylvia', 'XYZ', 'USA', 'Batch2', true]
+    // 0: Name
+    // 1: City
+    // 2: Country
+    // 3: Batch
+    // 4: isGraduated
+
+    // const sylviaDetails = {
+    //   name: 'Syvlia',
+    //   city: 'XYZ',
+    //   country: 'USA',
+    //   batch: 'Batch2',
+    //   isGraduated: true
+    // }
+    // console.log(sylviaDetails['name'])
+    // console.log(sylviaDetails['country'])
+    // console.log(sylviaDetails['isGraduated'])
+
+    // console.log(sylviaDetails.name)
+    // console.log(sylviaDetails.country)
+    // console.log(sylviaDetails.isGraduated)
+
+    // sylviaDetails.age = 25
+    // sylviaDetails.city = 'New York'
+
+    // delete sylviaDetails.city
+    // console.log(sylviaDetails)
+
+    /* -------------------------------------------*/
+    // const simonDetails = {
+    //   name: 'Simon',
+    //   age: 26,
+    //   isGraduated: true,
+    //   favoriteColor: null,
+    //   hobbies: ['Swimming', 'Cycling', 'Dancing'],
+    //   sayHi: function (friend) {
+    //     console.log('Hi ' + friend + '!')
+    //   }
+    // }
+
+    // console.log(simonDetails)
+    // simonDetails.sayHi('Sonal')
+    // simonDetails.sayHi('Abdiel')
+ 
+    /* -------------------------------------------*/
+    // const anneDetails = {
+    //   name: 'Anne',
+    //   age: 27,
+    //   isGraduated: false
+    // }
+
+    // document.write(anneDetails.name)
+    // document.write(typeof JSON.stringify(anneDetails))
+
+    // const jsonString = JSON.stringify(anneDetails)
+    // console.log(jsonString)
+    // console.log(JSON.parse(jsonString))
+    // console.log(JSON.parse('{"firstName": "Kelly", "lastName": "Cook"}'))
+    // console.log(JSON.parse('{firstName: "Kelly", lastName: "Cook"}'))
+
+    // console.log(Object.keys(anneDetails))
+    // console.log(Object.values(anneDetails))
+    // console.log(Object.entries(anneDetails))
+
+    // # Iterate through an object
+    // const keys = Object.keys(anneDetails)
+    // for(let i = 0; i < keys.length; i++) {
+    //   console.log(keys[i], anneDetails[keys[i]])
+    // }
+
+    // 'for in' loop
+    // for(let key in anneDetails) {
+    //   console.log(key, anneDetails[key])
+    // }
+
+    // 'for of' loop (must be used on something iterable like an array)
+    // let arr1 = [10, 20, 30]
+    // for (element of arr1) {
+    //   console.log(element)
+    // }
+
+    // This wont work because annDetails is an object (not iterable)
+    // for(let key of anneDetails) {
+    //   console.log(key, anneDetails[key])
+    // }
+
+    // This will work because it is accessing an array created by the inbuild method
+    // for(let key of Object.keys(anneDetails)) {
+    //   console.log(key, anneDetails[key])
+    // }
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Objects: Collections of key value pairs
+    - keys (string)
+    - values (any data type)
+    - Syntax:
+      let obj1 = {
+        key1: value1,
+        key2: value2,
+        key3: value3,
+        ,,,
+      }
+
+    - Access values using keys
+      - Syntax 1: obj1['key1']
+      - Syntax 2: obj1.key1 **
+
+    - Add/Update values using keys
+      - Syntax 1: obj1['key1'] = value1
+      - Syntax 2: obj1.key1 = value1 **
+
+    - Delete a key
+      - 'delete' keyword
+      - Syntax: obj1.key1
+
+    - Properties and Methods (keys)
+      - Properties: Keys holding any value other than function
+      - Methods: Keys holding functions as a reference
+
+    - Inbuild object methods:
+      - Object.keys(obj1): Returns an array of keys belonging to a specific object
+      - Object.values(obj1): Returns an array of values belonging to a specific object
+      - Object.entries(obj1): Returns an array of [key, value] pairs belonging to a specific object
+
+    - JSON: JavaScript Object Notation
+      - JSON.stringify(): Convert a JS object to JSON string
+      - JSON.parse(): Convert a JSON string to a JS object
+
+    - Side note:
+      - [object Object]: Object in the HTML document flow
+*/
+</pre>
