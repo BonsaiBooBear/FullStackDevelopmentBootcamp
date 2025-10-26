@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>'this' Keyword</title>
+</head>
+<body>
+  <h1>'this' Keyword</h1>
+  <script>
+    // const simonDetails = {
+    //   name: 'Simon',
+    //   age: 26,
+    //   isGraduated: true,
+    //   favoriteColor: null,
+    //   hobbies: ['Swimming', 'Cycling', 'Dancing'],
+    //   displayIntroduction: function () {
+    //     console.log(this)
+    //   }
+    // }
+
+    // const obj1 = {
+    //   a: 5,
+    //   b: 10,
+    //   test: function() {
+    //     console.log(this)
+    //   }
+    // }
+
+    // simonDetails.displayIntroduction()
+    // obj1.test()
+
+    // const simonDetails = {
+    //   name: 'Simon',
+    //   age: 26,
+    //   isGraduated: true,
+    //   favoriteColor: null,
+    //   hobbies: ['Swimming', 'Cycling', 'Dancing'],
+    //   displayIntroduction: function () {
+    //     console.log("Hi, I'm " + this.name + "! I'm " + this.age + " years old. ...")
+    //   }
+    // }
+
+    // const deeDetails = {
+    //   name: 'Dee',
+    //   age: 25,
+    //   isGraduated: false,
+    //   favoriteColor: null,
+    //   hobbies: ['Singing', 'Dancing'],
+    //   displayIntroduction: function () {
+    //     console.log("Hi, I'm " + this["name"] + "! I'm " + this["age"] + " years old. ...")
+    //   }
+    // }
+
+    // simonDetails.displayIntroduction()
+    // deeDetails.displayIntroduction()
+
+    /* -------------------------------------------*/
+    // console.log(this) //Window object
+
+    // alert('You have successfully logged in :)')
+    // window.alert('You have successfully logged in :)')
+    // this.alert('You have successfully logged in :)')
+
+    var x = 10
+    var y = 20
+
+    /* -------------------------------------------*/
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # 'this' Keyword: Refers to its immediate parent object
+    - Within a method of an object: Refers to that parent object
+    - In global scope: Refers to the window object
+
+    - Additional note:
+      - Window object is the Browser Object Model (BOM)
+        - Complete information about the webpage and the browser details
+        - Reserved: window
+*/
+</pre>

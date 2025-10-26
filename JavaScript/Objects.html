@@ -101,10 +101,29 @@
     //   console.log(key, anneDetails[key])
     // }
 
-    // This will work because it is accessing an array created by the inbuild method
+    // This will work because it is accessing an array created by the inbuilt method
     // for(let key of Object.keys(anneDetails)) {
     //   console.log(key, anneDetails[key])
     // }
+
+    /* -------------------------------------------*/
+
+    // const num1 = 5
+    // const num2 = new Number(5)
+    // console.log(num1, num2)
+    // console.log(num1 === num2)
+    // console.log(typeof num1, typeof num2)
+
+    // const str1 = 'Yaritza'
+    // const str2 = new String('Yaritza')
+    // console.log(str1, str2)
+    // console.log(str1 === str2)
+    // console.log(typeof str1, typeof str2)
+    // console.log(str2.valueOf()) // valueOf: Primitive value
+
+    // const str1 = 'Yaritza'
+    // console.log(str1.toUpperCase()) // JS under the hood, wraps this string value as a String object so that properties and methods can be used
+    // console.log(typeof str1)
   </script>
 </body>
 </html>
@@ -152,5 +171,14 @@
 
     - Side note:
       - [object Object]: Object in the HTML document flow
+
+  # Constructor: Create objects of similar type
+    - Create a new object from constructor: 'new' keyword
+    - Inbuilt constructors: Used by JS behind the scenes
+      - Number()
+      - String()
+      - Boolean()
+
+    - typeof null = object (similar to NaN being a number, they had to categorize null somewhere)
 */
 </pre>
