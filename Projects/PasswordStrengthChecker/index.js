@@ -31,11 +31,11 @@ function validatePassword(password) {
 
   // Check: 1. Minimum length should be 8 characters
   if(password.length >= 8) {
-    document.getElementById('length-check').innerText = '✅'
+    document.getElementById('length-check').classList.add('fa-solid', 'fa-square-check')
     document.getElementById('length-check-container').classList.add('list-group-item-success')
     score++
   } else {
-    document.getElementById('length-check').innerText = '⚠'
+    document.getElementById('length-check').classList.add('fa-solid', 'fa-square-xmark')
     document.getElementById('length-check-container').classList.add('list-group-item-danger')
   }
 
@@ -69,38 +69,38 @@ function validatePassword(password) {
     }
   }
   if(containsLower) {
-    document.getElementById('lowercase-check').innerText = '✅'
+    document.getElementById('lowercase-check').classList.add('fa-solid', 'fa-square-check')
     document.getElementById('lowercase-check-container').classList.add('list-group-item-success')
     score++
   } else {
-    document.getElementById('lowercase-check').innerText = '⚠'
+    document.getElementById('lowercase-check').classList.add('fa-solid', 'fa-square-xmark')
     document.getElementById('lowercase-check-container').classList.add('list-group-item-danger')
   }
 
   if(containsUpper) {
-    document.getElementById('uppercase-check').innerText = '✅'
+    document.getElementById('uppercase-check').classList.add('fa-solid', 'fa-square-check')
     document.getElementById('uppercase-check-container').classList.add('list-group-item-success')
     score++
   } else {
-    document.getElementById('uppercase-check').innerText = '⚠'
+    document.getElementById('uppercase-check').classList.add('fa-solid', 'fa-square-xmark')
     document.getElementById('uppercase-check-container').classList.add('list-group-item-danger')
   }
 
   if(containsNumber) {
-    document.getElementById('number-check').innerText = '✅'
+    document.getElementById('number-check').classList.add('fa-solid', 'fa-square-check')
     document.getElementById('number-check-container').classList.add('list-group-item-success')
     score++
   } else {
-    document.getElementById('number-check').innerText = '⚠'
+    document.getElementById('number-check').classList.add('fa-solid', 'fa-square-xmark')
     document.getElementById('number-check-container').classList.add('list-group-item-danger')
   }
 
   if(containsSpecialChar) {
-    document.getElementById('special-char-check').innerText = '✅'
+    document.getElementById('special-char-check').classList.add('fa-solid', 'fa-square-check')
     document.getElementById('special-char-check-container').classList.add('list-group-item-success')
     score++
   } else {
-    document.getElementById('special-char-check').innerText = '⚠'
+    document.getElementById('special-char-check').classList.add('fa-solid', 'fa-square-xmark')
     document.getElementById('special-char-check-container').classList.add('list-group-item-danger')
   }
 
@@ -109,11 +109,11 @@ function validatePassword(password) {
   if(!easyPasswords.some(function(pattern) {
     return password.toLowerCase().includes(pattern)
   })) {
-    document.getElementById('easy-check').innerText = '✅'
+    document.getElementById('easy-check').classList.add('fa-solid', 'fa-square-check')
     document.getElementById('easy-check-container').classList.add('list-group-item-success')
     score++
   } else {
-    document.getElementById('easy-check').innerText = '⚠'
+    document.getElementById('easy-check').classList.add('fa-solid', 'fa-square-xmark')
     document.getElementById('easy-check-container').classList.add('list-group-item-danger')
   }
 
