@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Hoisting</title>
+</head>
+<body>
+  <h1>Hoisting</h1>
+
+  
+  <script>
+    // var x
+    // console.log(x)
+
+    // console.log(x)
+    // var x
+
+    // function sayHi() {
+    //   console.log('Hi')
+    // }
+    // sayHi()
+
+    // sayHi()
+    // function sayHi() {
+    //   console.log('Hi')
+    // }
+
+    // console.log(x) // log undefined
+    // var x = 5
+
+    /* -----------------------------------*/
+    // console.log(x) // error: cannot access 'x' before initialization
+    // let x = 5
+
+    // let x
+    // console.log(x) // undefined
+
+    // console.log(x)  // error: cannot access 'x' before initialization
+    // const x = 5
+
+    /* -----------------------------------*/
+    abc()
+    def()
+
+    function abc() {
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+    }
+
+    function def() {
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+      console.log('Test')
+    }
+
+
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Hoisting: Variables and function declarations are moved to the top of the execution context before executing
+    - Access variables and functions before declaration
+    - Initializations and assignments are NOT hoisted.
+    - JavaScript will "hoist" declarations above the invocations because the invocations will only be referenced in the memory allocation stage.
+    - JavaScript is an integrated language. No compiler needed.
+
+
+    - Temporal Dead Zone (TDZ)
+      - 'let' and 'const' keywords are hoisted, but they continue to remain in TDZ until they are assigned a value
+      - JavaScript is aware of the variable/constant created using let/const, but it cannot be accessed until it has been declared/initialized
+*/
+</pre>

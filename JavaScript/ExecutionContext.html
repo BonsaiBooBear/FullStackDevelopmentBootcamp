@@ -8,92 +8,92 @@
 </head>
 <body>
   <h1>Execution Context</h1>
+
+  <script>
+  //  var num1 = 10
+  //  var num2 = 20
+  //  console.log(num1 + num2) // 30
+
+  //  // Phase running: MEMORY ALLOCATION
+  //  num1
+  //  num2
+
+  //  // JS Memory only stores the declarations (undefined values). When the execution occurs, it assigns the values.
+
+  //  //Current phase running: CODE EXECUTION
+  //  num1: 10
+  //  num2: 20
+
+  /* ---------------------------------------*/
+  // var x = 20
+  // var y = 40
+
+  // function sum() {
+  //   var num1 = 50
+  //   var num2 = 100
+  //   console.log(num1 + num2)
+  // }
+
+  // console.log(x + y)
+  // sum()
+
+  // // JS Memory
+  //   // GEC
+  //   x
+  //   y
+  // // Execution
+  //   x: 20
+  //   y: 40
+  //   // skips function until invocation - jumps to line 38
+  //   60 // will be logged
+  //   // when invoked, execution jumps to line 32
+  //   // JS Memory
+  //     // FEC (sum)
+  //     num1
+  //     num2
+  //   // Execution
+  //   num1: 50
+  //   num2: 100
+  //   150 // will be logged
+
+  /* ---------------------------------------*/
+  // function sum(num1, num2) {
+  //   console.log(num1 + num2)
+  // }
+
+  // sum(10, 20)
+  // sum(50, 80)
+
+  // // JS Memory will store a reference for the function.
+  // // Once invoked in line 64, JS will loop through the FEC
+  // num1: 10
+  // num2: 20
+  // 30 // will be logged
+  // // Once invoked in line 65, JS will loop through the FEC
+  // num1: 50
+  // num2: 80
+  // 130 // will be logged
+
+  /* ---------------------------------------*/
+  // function sum(num1, num2) {
+  //   return num1 + num2
+  // }
+
+  // console.log(sum(10, 20))
+  // console.log(sum(50, 80))
+
+  // // JS Memory will store a reference for the function.
+  // // Once invoked in line 83, JS will loop through the FEC
+  // num1: 10
+  // num2: 20
+  // Return value: 30 // will be logged
+  // // Once invoked in line 84, JS will loop through the FEC
+  // num1: 50
+  // num2: 80
+  // Return value: 130 // will be logged
+
+  </script>
 </body>
-
-<script>
-//  var num1 = 10
-//  var num2 = 20
-//  console.log(num1 + num2) // 30
-
-//  // Phase running: MEMORY ALLOCATION
-//  num1
-//  num2
-
-//  // JS Memory only stores the declarations (undefined values). When the execution occurs, it assigns the values.
-
-//  //Current phase running: CODE EXECUTION
-//  num1: 10
-//  num2: 20
-
-/* ---------------------------------------*/
-// var x = 20
-// var y = 40
-
-// function sum() {
-//   var num1 = 50
-//   var num2 = 100
-//   console.log(num1 + num2)
-// }
-
-// console.log(x + y)
-// sum()
-
-// // JS Memory
-//   // GEC
-//   x
-//   y
-// // Execution
-//   x: 20
-//   y: 40
-//   // skips function until invocation - jumps to line 38
-//   60 // will be logged
-//   // when invoked, execution jumps to line 32
-//   // JS Memory
-//     // FEC (sum)
-//     num1
-//     num2
-//   // Execution
-//   num1: 50
-//   num2: 100
-//   150 // will be logged
-
-/* ---------------------------------------*/
-// function sum(num1, num2) {
-//   console.log(num1 + num2)
-// }
-
-// sum(10, 20)
-// sum(50, 80)
-
-// // JS Memory will store a reference for the function.
-// // Once invoked in line 64, JS will loop through the FEC
-// num1: 10
-// num2: 20
-// 30 // will be logged
-// // Once invoked in line 65, JS will loop through the FEC
-// num1: 50
-// num2: 80
-// 130 // will be logged
-
-/* ---------------------------------------*/
-// function sum(num1, num2) {
-//   return num1 + num2
-// }
-
-// console.log(sum(10, 20))
-// console.log(sum(50, 80))
-
-// // JS Memory will store a reference for the function.
-// // Once invoked in line 83, JS will loop through the FEC
-// num1: 10
-// num2: 20
-// Return value: 30 // will be logged
-// // Once invoked in line 84, JS will loop through the FEC
-// num1: 50
-// num2: 80
-// Return value: 130 // will be logged
-
-</script>
 </html>
 <br><br><br><br>
 <hr>
