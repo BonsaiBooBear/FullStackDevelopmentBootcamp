@@ -50,9 +50,9 @@
         </div>
         <form class="form-inline w-100 mb-5" onsubmit="event.preventDefault(); validatePassword(document.getElementById('inputPassword').value);">
           <h5>Username</h5>
-          <input type="text" placeholder="Enter your Username" class="form-control w-100 mb-4">
+          <input type="text" placeholder="Enter your Username" class="form-control w-100 mb-4" required>
           <h5>Password</h5>
-          <input type="password" id="inputPassword" placeholder="Enter your password" class="form-control w-100 mb-2">
+          <input type="password" id="inputPassword" placeholder="Enter your password" class="form-control w-100 mb-2" required>
           <div class="my-1 fs-5 w-100">
             <span class="badge text-bg-success d-none" id="strong-password">Your password is Strong</span>
             <span class="badge text-bg-warning d-none" id="moderate-password">Your password is Moderate</span>
@@ -87,7 +87,7 @@
             </ul>
           </div>
           <h5>Confirm Password</h5>
-          <input type="password" placeholder="Confirm your password" id="inputConfirmPassword" class="form-control w-100 mb-3">
+          <input type="password" placeholder="Confirm your password" id="inputConfirmPassword" class="form-control w-100 mb-3" required>
           <div class="d-flex justify-content-center px-3">
             <input type="reset" value="clear" class="btn btn-secondary text-center me-2">
             <input type="submit" value="submit" class="btn btn-primary text-center">
