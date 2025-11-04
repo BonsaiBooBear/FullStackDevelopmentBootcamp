@@ -129,8 +129,8 @@ function validatePassword(password) {
   }
 }
 
-const inputPassword = prompt("Enter your password")
-console.log(inputPassword)
+// const inputPassword = prompt("Enter your password")
+// console.log(inputPassword)
 
 validatePassword(inputPassword)
 

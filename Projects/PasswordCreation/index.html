@@ -8,77 +8,90 @@
   <link rel="stylesheet" href="index.css">
   <script src="https://kit.fontawesome.com/cc383de1b1.js" crossorigin="anonymous"></script>
 </head>
-<body>
-   <nav class="navbar navbar-expand-lg bg-lightblue border-bottom border-body">
+<body class="pb-5">
+  <nav class="navbar navbar-expand-lg border-bottom border-body">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/BookNookNavLogo.svg" alt="Logo" class="d-inline-block">
+        <img src="assets/BookNookNavLogo.svg" alt="Logo" class="d-inline-block w-75">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Posts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="connections.html">Manage Connections</a>
-          </li>
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <form class="d-flex align-items-center" role="search">
+            <label for="searchBooks" class="d-inline-block no-wrap align-middle me-2"><strong>Search our extensive library:</strong></label>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchBooks"/>
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Messages</a>
+            <a class="nav-link" href="#">Log In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link active" href="#">Create Account</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="container mt-3 text-center">
-    <img src="assets/BookNookLogo.svg" alt="Logo" class="d-inline-block w-50">
-    <h1 class="display-4 mb-3">Create Password</h1>
-
-    <div class="alert alert-danger alert-dismissible fade show d-none" role="alert" id="invalid-password-alert">
-      <strong>Invalid Password.</strong> Please enter a valid password.
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <main class="bg-gradient">
+    <div class="container pt-3 d-flex justify-content-around align-items-center">
+      <img src="assets/BookNookLogo.svg" alt="Logo" class="d-inline-block w-50 center">
+      <div>
+        <h1 class="pb-3">Get Your eLibrary Card!</h1>
+        <div class="alert alert-danger alert-dismissible fade show d-none" role="alert" id="invalid-password-alert">
+          <strong>Invalid Password.</strong> Please enter a valid password.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <form class="form-inline w-100" onsubmit="event.preventDefault(); validatePassword(document.getElementById('inputPassword').value);">
+          <h5>Username</h5>
+          <input type="text" placeholder="Enter your Username" class="form-control w-100 mb-4">
+          <h5>Password</h5>
+          <input type="password" id="inputPassword" placeholder="Enter your password" class="form-control w-100 mb-2">
+          <div class="my-1 fs-5 w-100">
+            <span class="badge text-bg-success d-none" id="strong-password">Your password is Strong</span>
+            <span class="badge text-bg-warning d-none" id="moderate-password">Your password is Moderate</span>
+            <span class="badge text-bg-danger d-none" id="weak-password">Your password is Weak</span>
+          </div>
+          <div class="d-flex justify-content-center fs-6">
+            <ul class="list-group list-group-flush w-75 mb-3">
+              <li class="list-group-item d-flex justify-content-between align-items-center" id="length-check-container">
+                Minimum length should be 8 characters
+                <span id="length-check"></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" id="lowercase-check-container">
+                At least one lowercase character
+                <span id="lowercase-check"></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" id="uppercase-check-container">
+                At least one uppercase character
+                <span id="uppercase-check"></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" id="number-check-container">
+                At least one number
+                <span id="number-check"></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" id="special-char-check-container">
+                At least one special character ($, @, #)
+                <span id="special-char-check"></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" id="easy-check-container">
+                No common phrases
+                <span id="easy-check"></span>
+              </li>
+            </ul>
+          </div>
+          <input type="password" placeholder="Confirm your password" class="form-control w-100 mb-3">
+          <div class="d-flex justify-content-center">
+            <input type="button" value="clear" class="btn btn-secondary text-center me-2">
+            <input type="submit" value="submit" class="btn btn-primary text-center">
+          </div>
+        </form>
+      </div>
     </div>
-
-    <div class="my-3 fs-5">
-      <span class="badge text-bg-success d-none" id="strong-password">Your password is Strong</span>
-      <span class="badge text-bg-warning d-none" id="moderate-password">Your password is Moderate</span>
-      <span class="badge text-bg-danger d-none" id="weak-password">Your password is Weak</span>
-    </div>
-
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item d-flex justify-content-between align-items-center" id="length-check-container">
-        Minimum length should be 8 characters
-        <span id="length-check"></span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center" id="lowercase-check-container">
-        At least one lowercase character
-        <span id="lowercase-check"></span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center" id="uppercase-check-container">
-        At least one uppercase character
-        <span id="uppercase-check"></span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center" id="number-check-container">
-        At least one number
-        <span id="number-check"></span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center" id="special-char-check-container">
-        At least one special character ($, @, #)
-        <span id="special-char-check"></span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center" id="easy-check-container">
-        No easy passwords
-        <span id="easy-check"></span>
-      </li>
-    </ul>
-  </div>
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>

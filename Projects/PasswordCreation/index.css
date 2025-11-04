@@ -1,0 +1,23 @@
+body {
+  background-image: linear-gradient(to bottom right, rgb(0, 225, 241), rgb(16, 180, 235), rgb(114, 222, 255), rgb(0, 195, 255), rgb(114, 222, 255), rgb(0, 225, 241), rgb(16, 180, 235));
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+nav {
+  font-weight: 900;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.list-group {
+  font-size: .9rem;
+}
+
+.list-group-item {
+  padding: .3rem;
+}
