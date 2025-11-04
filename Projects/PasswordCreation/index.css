@@ -16,8 +16,22 @@ nav {
 
 .list-group {
   font-size: .9rem;
+  width: 50%;
 }
 
 .list-group-item {
   padding: .3rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .container {
+    flex-direction: column;
+  }
+  .list-group {
+    width: 100%;
+    font-size: .7rem;
+  }
+  #big-brand-logo {
+    padding-bottom: 3rem;
+  }
 }

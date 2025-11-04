@@ -21,10 +21,14 @@
 
 // Main Check: Password is empty or null
 function validatePassword(password) {
+  confirmPassword = document.getElementById('inputConfirmPassword').value
   if(!password) {
     document.getElementById('invalid-password-alert').classList.remove('d-none')
     document.getElementById('invalid-password-alert').classList.add('d-block')
     return  // Guard clause - Terminates the FUNCTION here
+  } else if(password !== confirmPassword) {
+    document.getElementById('passwords-no-match').classList.remove('d-none')
+    document.getElementById('passwords-no-match').classList.add('d-block')
   }
 
   let score = 0
@@ -132,7 +136,7 @@ function validatePassword(password) {
 // const inputPassword = prompt("Enter your password")
 // console.log(inputPassword)
 
-validatePassword(inputPassword)
+// validatePassword(inputPassword)
 
 
 

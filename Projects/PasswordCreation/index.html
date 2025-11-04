@@ -18,11 +18,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <form class="d-flex align-items-center" role="search">
-            <label for="searchBooks" class="d-inline-block no-wrap align-middle me-2"><strong>Search our extensive library:</strong></label>
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchBooks"/>
-            <button class="btn btn-outline-primary" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search our library..." aria-label="Search library" id="searchBooks"/>
+            <button class="btn btn-primary" type="submit">Search</button>
           </form>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0">
@@ -37,15 +36,19 @@
     </div>
   </nav>
   <main class="bg-gradient">
-    <div class="container pt-3 d-flex justify-content-around align-items-center">
-      <img src="assets/BookNookLogo.svg" alt="Logo" class="d-inline-block w-50 center">
-      <div>
-        <h1 class="pb-3">Get Your eLibrary Card!</h1>
+    <div class="container pt-3 d-flex justify-content-between align-items-center">
+      <img src="assets/BookNookLogo.svg" alt="Logo" id="big-brand-logo" class="d-inline-block w-75">
+      <div class="w-75">
+        <h1 class="pb-3 text-center">Get Your eLibrary Card!</h1>
         <div class="alert alert-danger alert-dismissible fade show d-none" role="alert" id="invalid-password-alert">
           <strong>Invalid Password.</strong> Please enter a valid password.
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-        <form class="form-inline w-100" onsubmit="event.preventDefault(); validatePassword(document.getElementById('inputPassword').value);">
+        <div class="alert alert-danger alert-dismissible fade show d-none" role="alert" id="passwords-no-match">
+          <strong>Passwords don't match.</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <form class="form-inline w-100 mb-5" onsubmit="event.preventDefault(); validatePassword(document.getElementById('inputPassword').value);">
           <h5>Username</h5>
           <input type="text" placeholder="Enter your Username" class="form-control w-100 mb-4">
           <h5>Password</h5>
@@ -56,36 +59,37 @@
             <span class="badge text-bg-danger d-none" id="weak-password">Your password is Weak</span>
           </div>
           <div class="d-flex justify-content-center fs-6">
-            <ul class="list-group list-group-flush w-75 mb-3">
-              <li class="list-group-item d-flex justify-content-between align-items-center" id="length-check-container">
+            <ul class="list-group list-group-flush mb-3 fw-bold">
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" id="length-check-container">
                 Minimum length should be 8 characters
                 <span id="length-check"></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" id="lowercase-check-container">
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" id="lowercase-check-container">
                 At least one lowercase character
                 <span id="lowercase-check"></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" id="uppercase-check-container">
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" id="uppercase-check-container">
                 At least one uppercase character
                 <span id="uppercase-check"></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" id="number-check-container">
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" id="number-check-container">
                 At least one number
                 <span id="number-check"></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" id="special-char-check-container">
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" id="special-char-check-container">
                 At least one special character ($, @, #)
                 <span id="special-char-check"></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" id="easy-check-container">
+              <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" id="easy-check-container">
                 No common phrases
                 <span id="easy-check"></span>
               </li>
             </ul>
           </div>
-          <input type="password" placeholder="Confirm your password" class="form-control w-100 mb-3">
-          <div class="d-flex justify-content-center">
-            <input type="button" value="clear" class="btn btn-secondary text-center me-2">
+          <h5>Confirm Password</h5>
+          <input type="password" placeholder="Confirm your password" id="inputConfirmPassword" class="form-control w-100 mb-3">
+          <div class="d-flex justify-content-center px-3">
+            <input type="reset" value="clear" class="btn btn-secondary text-center me-2">
             <input type="submit" value="submit" class="btn btn-primary text-center">
           </div>
         </form>
