@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>ES6 Concepts</title>
+</head>
+<body>
+  <h1>ES6 Concepts</h1>
+
+  <script>
+    // const str1 = 'Abdiel'
+    // console.log(str1)
+    // const str2 = "He said: "He likes to code in JS""
+    // const str2 = "He said: \"He likes to code in JS\""
+    // console.log(str2)
+
+    // const str3 = 'Yaritza\'s project submission'
+    // console.log(str3)
+
+    // const str4 = "My hobbies \n- Swimming \n- Dancing"
+//     const str4 = `My hobbies
+// - Swimming
+// - Dancing
+//     `
+//     console.log(str4)
+
+/* ------------------------------------------ */
+    // var x = 5
+    // const str5 = "Madeline has submitted " + x + " number of projects so far"
+    // const student1 = {
+    //   name: "Madeline",
+    //   numberOfProjectSubmitted: 5,
+    //   city: "New York"
+    // }
+    // const str5 = "Hi, I'm " + student1.name + ". I have submitted " + student1.numberOfProjectSubmitted + " number of projects so far. I reside in " + student1.city + "!"
+    // const str5 = `Hi, I'm ${student1.name}. I have submitted ${student1.numberOfProjectSubmitted} number of projects so far. I reside in ${student1.city}!`
+
+    // console.log(str5)
+
+    /* ------------------------------------------ */
+    // function sum(num1, num2, num3) {
+    //   return num1 + num2 + num3
+    // }
+    // console.log(sum(5,10,15)) // results in 30
+    // console.log(sum(5,10)) // results in undefined (5 + undefined)
+
+    //  function sum(num1, num2, num3 = 0) {
+    //   return num1 + num2 + num3
+    // }
+    // console.log(sum(5,10,15)) // results in 30
+    // console.log(sum(5,10)) // results in 15
+
+    /* ------------------------------------------ */
+    // const abc = () => {
+    //   console.log('Hi')
+    // }
+    // abc()
+
+    // const sum = (num1, num2) => {
+    //   return num1 + num2
+    // }
+    // console.log(sum(5,10))
+
+    // const abc = () => { // Cannot be converted to single arrow function because it has more than one line
+    //   console.log('Hi')
+    //   console.log('Test')
+    // }
+    // abc()
+
+    // const abc = () => { // Cannot be converted to single arrow function because it has more than one line
+    //   let x = 'Test'
+    //   console.log(x)
+    // }
+    // abc()
+
+    // const abc = () => console.log('Hi')
+    // abc()
+
+    // const sum = (num1, num2) => num1 + num2
+    // console.log(sum(5,10))
+
+    // const add = (a, b) => a + b
+    // const subtract = (a, b) => a - b
+    // const multiply = (a, b) => a * b
+    // const divide = (a, b) => a / b
+
+    // const sayHi = (friend) => console.log(`Hi ${friend}!`)
+    // const sayHi = friend => console.log(`Hi ${friend}!`)
+    // sayHi('Mark')
+    // sayHi('Kelly')
+
+    /* ------------------------------------------ */
+    // const name = 'Mark'
+    // const batch = 2
+    // const projectsSub = 5
+    // const city = 'London'
+    // const cityName = 'London'
+
+    // const student1 = {
+    //   name: name,
+    //   batch: batch,
+    //   projectsSub: projectsSub,
+    //   city: city
+    // }
+    // const student1 = { name, batch, projectsSub, city }
+    // const student1 = { name, batch, projectsSub, city: cityName }
+
+    // console.log(student1)
+
+    /* ------------------------------------------ */
+    // const student1 = {
+    //   name: "Madeline",
+    //   city: "New York",
+    //   country: "USA"
+    // }
+    // const name = student1.name
+    // const city = student1.city
+    // const country = student1.country
+
+    // const student2 = {
+    //   name: "Mary",
+    //   city: "London",
+    //   country: "UK"
+    // }
+    
+    // const { name, city, country } = student1
+    // const { // for a lot of variables, it's cleaner with more lines
+    //   name,
+    //   city,
+    //   country
+    // } = student1 
+
+    // const {
+    //   name: name2,
+    //   city: city2,
+    //   country: country2
+    // } = student2
+
+    // console.log(`Hi, I'm ${name}. I reside in ${city}, ${country}!`)
+    // console.log(`Hi, I'm ${name2}. I reside in ${city2}, ${country2}!`)
+
+    // const obj = { a: 5, b: 10 }
+    // const { a: test1, b: test2} = obj
+    // console.log(test1, test2)
+
+    /* ------------------------------------------ */
+    // const arr = ['Kelly', 'Anne', 'Madeline']
+    // console.log(arr)
+    // console.log(...arr)
+    
+    // const arr1 = [1, 2, 3, 4, 5]
+    // console.log(arr)
+    // console.log(...arr)
+
+    // ## Copy of an non-primitive value: Shallow copy instead of non-primitive assignment
+
+    // # Way 1 (Non-primitive assignment: reference gets assigned)
+    // const arr2 = arr1 // Both are referring to the same object in the heap memory
+    // arr1[0] = 100
+    // console.log(arr1)
+    // console.log(arr2)
+
+    // # Way 2 (Shallow copy: Creating a brand new copy of the array)
+    // const arr3 = [...arr1]
+    // arr1[0] = 100
+    // console.log(arr1)
+    // console.log(arr3)
+    
+    /* ------------------------------------------ */
+    // const student1 = {
+    //   name: "Madeline",
+    //   address: {
+    //     city: "New York",
+    //     country: "USA"
+    //   }
+    // }
+
+    // # To create a copy of student1
+
+    // # Shallow copy (Only first order properties are copied)
+    // const student2 = { ...student1 }
+    // student1.name = 'M'
+    // student1.address.city = 'California'
+    // console.log(student2)
+
+    // # Deep copy (All level/order properties are copied)
+    // const student2 = JSON.parse(JSON.stringify(student1))
+    // student1.address.city = 'California'
+    // console.log(student2)
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # ES6 Concepts:
+    - ES: ECMAScript (another name for JavaScript)
+    - ES6: JavaScript 6th version (2015) - Last MAJOR update, became the new baseline
+    - Several 'Syntactic sugar' (Minimalist syntaxes) were introduced in this version
+    - ES6 is used extensively in JS libraries like React, Vue, Angular, etc.
+
+    - Concepts/Syntaxes Introduced:
+      1. let and const (Block scope) ***
+        - let: Declare variables
+        - const: Declare constants
+      2. Template literals/strings (``)
+        - It starts and ends with back ticks (`)
+        - Supports multi-line strings and expressions
+        - Syntax to use variables within template strings
+          - `${variable}`
+      3. Default parameters
+        - Default values can be provided to the function parameters. If case arguments are not provided, the default values are used
+        - Syntax: function abc(a = 0, b = 0) {}
+      4. Arrow functions (() => {}) ***
+        - Syntactic sugar for anonymous functions
+        - Syntax:
+          const abc = () => {
+            console.log('Hi')
+          }
+          - Single line arrow function
+            - Syntax:
+              const abc = () => console.log('Hi')
+            - Scenarios:
+                - Executes a single expression (Skip {})
+                - Single expression with a returns value (Skip {} and return keyword)
+            - Additional note: Skip () if only ONE parameters exist
+      5. Object property shorthand ({ prop1, prop2 })
+        - Whenever the variable name and the object property name are the same, instead of 'key:value', only 'key' can be specified
+      6. Destructuring ({ prop1 } = obj)
+        - Create variables having the same name as property name and have the value = value of that property
+          - Syntax:
+            const { a, b } = obj1
+            - Different variable name for properties
+              const { a: test1, b: test2 } = obj1
+      7. Spread Operator (...)
+        - Used with arrays and objects
+        - Syntax:
+          [...arr] (Arrays)
+          {...obj} (Objects)
+        - Additional copy:
+          - Shallow copy:
+            - ONLY First order properties/elements are copied
+            - Best for simple arrays and objects
+          - Deep copy:
+            - Complete copy of properties across ALL levels/orders
+            - Best for complex arrays and objects
+
+*/
+</pre>
