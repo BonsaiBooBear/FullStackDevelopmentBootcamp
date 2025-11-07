@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark light">
-  <title>Call Stack</title>
+  <title>CallStack-LexEnv-ScopeChain</title>
 </head>
 <body>
-  <h1>Call Stack</h1>
+  <h1>Call Stack, Lexical Environment, & Scope Chaining</h1>
 
   <script>
     // LIFO
@@ -91,6 +91,40 @@
     // ghi 3 (Will pop off first)
     // def 2 (Will pop off second)
     // abc 1 (Will pop off last)
+
+    /* -------------------------------*/
+    // let num1 = 5
+    // console.log(num1) // Can be accessed in any block (global)
+    
+    // function abc() {
+    //   let num2 = 10 // Can be access by the next block, but not the previous block
+    //   console.log(num1, num2)
+    //   if(true) {
+    //     let num3 = 100 // Cannot be accessed outside this block
+    //     console.log(num1, num2, num3)
+    //   }
+    // }
+
+    // abc()
+
+    /* -------------------------------*/
+    let num1 = 10
+    function abc() {
+      let num2 = 20
+      console.log(num1, num2)
+
+      function def() {
+      let num3 = 100
+      console.log(num1, num2, num3)
+      }
+
+      def()
+    }
+
+    abc()
+    
+    // Scope chain of def: def -> abc -> Global
+    // Scope chain of abc: abc - > Global
   </script>
 </body>
 </html>
@@ -104,6 +138,13 @@
     - Stack data structure: LIFO (Last In First Out)
     - GEC (Global Execution Context): Always called first and never pops out
 
+  # Lexical Environment/Scope:
+    - "Lexical" means where a specific identifier is declared/written in the complete code
+      - Lexical Environment: The area where the identifier can be accessed (its own scope + outer area)
+    - Inner scopes can access variables declared in the outer scopes (comes under it's lexical environment), but vice-versa is not possible
+
+  # Scope chain:
+    - Used to resolve identifier values. If an identifier is not found in the current scope, JS checks it in the parent scope. If not in the parent scope, JS continues checking 'up' until the global scope.
 
   #JS code visualizer tools:
     - https://pythontutor.com/render.html#mode=edit
