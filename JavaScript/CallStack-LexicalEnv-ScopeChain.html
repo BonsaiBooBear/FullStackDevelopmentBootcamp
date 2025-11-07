@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Call Stack</title>
+</head>
+<body>
+  <h1>Call Stack</h1>
+
+  <script>
+    // LIFO
+    // const arr = []
+    // arr.push(1)
+    // console.log(arr)
+    // arr.push(2)
+    // console.log(arr)
+    // arr.push(3)
+    // console.log(arr)
+    // arr.pop()
+    // console.log(arr)
+    // arr.pop()
+    // console.log(arr)
+    // arr.pop()
+    // console.log(arr)
+
+    // Queue Dynamics (FIFO)
+    // const arr = []
+    // arr.push(1)
+    // console.log(arr)
+    // arr.push(2)
+    // console.log(arr)
+    // arr.push(3)
+    // console.log(arr)
+    // arr.shift()
+    // console.log(arr)
+    // arr.shift()
+    // console.log(arr)
+    // arr.shift()
+    // console.log(arr)
+
+    /* -------------------------------*/
+
+    // function add(num1, num2) {
+    //   let sum = num1 + num2
+    //   console.log(sum)
+    // }
+
+    // function subtract(num1, num2) {
+    //   let diff = num1 - num2
+    //   console.log(diff)
+    // }
+
+    // add(10,20)
+    // subtract(100,40)
+    // add(50,60)
+
+    /* -------------------------------*/
+
+    // const x = 'Test'
+
+    // function abc() {
+    //   let y = 5
+    //   console.log('abc')
+    // }
+    // abc()
+
+    // Call Stack
+    // abc, y = 5
+    // GEC (x = 'test', abc -> (){})
+
+    /* -------------------------------*/
+    // function abc() {
+    //   console.log('abc')
+    //   def()
+    // }
+    
+    // function def() {
+    //   console.log('def')
+    //   ghi()
+    // }
+
+    // function ghi() {
+    //   console.log('ghi')
+    // }
+
+    // abc()
+
+    // Call Stack
+    // ghi 3 (Will pop off first)
+    // def 2 (Will pop off second)
+    // abc 1 (Will pop off last)
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Call Stack: Handles function execution by pushing/popping function execution context(s) into/from the stack
+    - Stack data structure: LIFO (Last In First Out)
+    - GEC (Global Execution Context): Always called first and never pops out
+
+
+  #JS code visualizer tools:
+    - https://pythontutor.com/render.html#mode=edit
+    - https://www.jsv9000.app/
+*/
+</pre>
