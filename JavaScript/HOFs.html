@@ -92,6 +92,72 @@
 
     /* -------------------------------------------- */
     // Closures
+      // function outer() {
+      //   console.log('OUTER FUNCTION')
+        
+      //   function inner() {
+      //     console.log('INNER FUNCTION')
+      //   }
+      //   inner()
+      // }
+      // outer()
+
+      /* ------------------------- */
+      // function outer() {
+      //   console.log('OUTER FUNCTION')
+        
+      //   function inner() {
+      //     console.log('INNER FUNCTION')
+      //   }
+        
+      //   return inner
+      // }
+      // outer()()
+
+      /* ------------------------- */
+      // const outer = function() {
+      //   console.log('OUTER FUNCTION')
+        
+      //   const inner = function() {
+      //     console.log('INNER FUNCTION')
+      //   }
+        
+      //   return inner
+      // }
+
+      // let abc = outer()
+      // abc()
+      // OR
+      // outer()()
+
+      /* ------------------------- */
+      // const outer = function() {
+      //   let outerVar = 5
+        
+      //   const inner = function() {
+      //     console.log(outerVar)
+      //   }
+        
+      //   inner()
+      // }
+
+      // outer()
+
+      /* ------------------------- */
+      // const outer = function() {
+      //   let outerVar = 5
+        
+      //   const inner = function() {
+      //     console.log(outerVar)
+      //   }
+        
+      //   return inner
+      // }
+
+      // const abc = outer()
+      // abc()
+      // OR
+      // outer()()
   </script>
 </body>
 </html>
@@ -104,7 +170,7 @@
   # HOFs: Higher Order Functions
     - A function which:
       - Takes another function as an argument (Callbacks)
-      - Returns another function as its result (Closures)
+      - Returns another function (Closures)
 
   # Callbacks: A function passes as an argument to another function
     - Syntax:
@@ -114,7 +180,10 @@
         func2(function() {
           // code
         })
-  # Closures: A function 
+
+  # Closures ***: Inner function continues to have access to the outer function variables (lexical environment), even after the outer function has completed execution
+    - In easy words, Closure = [Function's cope + lexical environment]
+    - Inner function "remembers" lexical environment
 
 
 */
