@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Array Higher Order Methods</title>
+</head>
+<body>
+  <h1>Array Higher Order Methods</h1>
+  
+  <script>
+    // const student1 ={
+    //   name: "Ashley",
+    //   batch: 2,
+    //   techStack: "MERN"
+    // }
+    // const student2 ={
+    //   name: "Sonal",
+    //   batch: 1,
+    //   techStack: "MEAN"
+    // }
+    // const student3 ={
+    //   name: "Sylvia",
+    //   batch: 3,
+    //   techStack: "MEVN"
+    // }
+
+    // const products = [
+    //   {
+    //     id: 1,
+    //     title: 'Headphone',
+    //     price: '$300',
+    //     rating: 4.5
+    //   },
+    //   {
+    //     id: 2,
+    //     title: 'Smartphone',
+    //     price: '$900',
+    //     rating: 4.25
+    //   }
+    // ]
+
+    /* --------------------------------------- */
+    // Example 1: Simple iteration
+    // const arr = [100, 150, 200, 250, 300]
+    // for(let i = 0; i < arr.length; i++) {
+    //   console.log(i, arr[i])
+    // }
+    // arr.forEach((element, index) => {
+      // console.log(element) // 100, 0  //Output = 100
+    //   console.log(index, element) // Output = 0 100
+    // })
+    // x = arr.forEach((element, index) => {
+    //   console.log(index, element) // Output = 0 100
+    // })
+    // console.log(x)
+
+    /* --------------------------------------- */
+    // Example 2: Calculate sum of elements of an array
+    // const arr = [129, 346666, 2044034, 1238042]
+    // let sum = 0
+    // arr.forEach((element, index) => {
+    //   sum += element
+    // })
+    // arr.forEach((element, index) => sum += element) // One-line format
+    // console.log(sum)
+
+    /* --------------------------------------- */
+    // Example 3: Find the largest number in the array
+    // const arr = [250, 150, 600, 450, 300]
+    // let max = Number.NEGATIVE_INFINITY
+    // arr.forEach(element => { // No need for index if not used. Can change syntax.
+    //   if (element > max) {
+    //     max = element
+    //   }
+    // })
+    // console.log(max)
+
+    /* --------------------------------------- */
+    // Example 4: Filter even numbers from an array
+    // const arr = [100, 97, 86, 91, 75]
+    // const result = []
+    // arr.forEach(element => {
+    //   if(element % 2 == 0) {
+    //     result.push(element)
+    //   }
+    // })
+    // console.log(result)
+
+    /* --------------------------------------- */
+    // Example 5: Return an array which has elements multiplied by 2
+    // const arr = [2, 3, 5, 7, 9]
+    // const result =[]
+    // arr.forEach(element => {
+    //   result.push(element * 2)
+    // })
+    // console.log(result)
+
+    /* ------------------------------------------------------------------ */
+    // Example 1: Filter even numbers from an array
+    // const arr = [100, 97, 86, 91, 75]
+    // const result = arr.filter(element => {
+    //   return element % 2 == 0
+    // })
+    // console.log(result)
+
+    /* --------------------------------------- */
+    // Example 2: Filter student names which have exactly 5 characters
+    // const students = ['Kelly', 'Kayla', 'Jeff', 'Madeline', 'Sonal']
+    // const result = students.filter(student => {
+    //   return student.length == 5
+    // })
+    // const result = students.filter(student => student.length == 5)
+    // console.log(result)
+
+    /* --------------------------------------- */
+    // Returning True or False
+    // const arr = [3, 6, 2, 5, 1]
+    // const result = arr.filter(e => {
+    //   return true // Each element is true. New array will have all
+    // })
+    // console.log(result)
+
+    // const arr = [3, 6, 2, 5, 1]
+    // const result = arr.filter(e => {
+    //   return false // Each element is false. New array will be empty
+    // })
+    // console.log(result)
+    
+    /* --------------------------------------- */
+  </script>
+</body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Array Higher Order Methods:
+    - Methods which use callback Syntax
+
+    1. forEach() ***
+      - Syntax:
+        arr.forEach((element, index) => {
+          // Code which executes for each element
+        })
+      - Iterate through the elements of the array and execute callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Does not return anything (undefined)
+    2. filter() ***
+      - Syntax:
+        arr.filter((element, index) => {
+          // return "condition"
+        })
+      - Iterate through the elements of the array and execute callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns a filtered array based on the condition provided. For each element, a boolean value is returned by the callback.
+        - If True: Value is added to the filtered array
+        - If False: Value is NOT added to the filtered array (skipped)
+      - Does NOT modify the original array
+      - Additional pointers:
+        - IF "true" boolean value is returned by the callback, the filtered array will have all elements
+        - IF "false" boolean value is returned by the callback, the filtered array will be an empty array
+        - filteredArray.length <= originalArray.length
+
+  # Additional Notes:
+    - When looking for beginning max and mins, use the Number object to find positive and negative infinities.
+        - let max = Number.NEGATIVE_INFINITY (smallest number possible before looping through elements that could have really large negative numbers)
+        - let min = Number.POSITIVE_INFINITY (largest number possible before looping through elements that could have really large positive numbers)
+*/
+</pre>
