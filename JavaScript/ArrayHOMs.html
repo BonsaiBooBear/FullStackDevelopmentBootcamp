@@ -128,7 +128,141 @@
     // })
     // console.log(result)
     
+    /* ------------------------------------------------------------------ */
+    // Example 1: Return an array which has elements multiplied by 2
+    // Expected output (O/P): [4, 6, 10, 14, 18]
+    // const arr = [2, 3, 5, 7, 9]
+    // const result = arr.map(element => {
+    //   return element * 2
+    // })
+    // console.log(result)
+
     /* --------------------------------------- */
+    // Example 2: Return an array with square of elements in the input array
+    // Expected output (O/P): [4, 49, 9, 36, 25]
+    // const arr = [2, 7, 3, 6, 5]
+    // const result = arr.map(e => {
+    //   return e ** 2 // or e * e
+    // })
+    // console.log(result)
+
+    /* --------------------------------------- */
+    // Example 3: Return an array with full name of users
+    // Expected output (O/P): ['Yaritza Hernandez', 'Madeline WG', 'Mary Moreno']
+    // const users = [
+    //   {
+    //     firstName: 'Yaritza',
+    //     lastName: 'Hernandez'
+    //   },
+    //   {
+    //     firstName: 'Madeline',
+    //     lastName: 'WG'
+    //   },
+    //   {
+    //     firstName: 'Mary',
+    //     lastName: 'Moreno'
+    //   },
+    //   {
+    //     firstName: 'Kelly',
+    //     lastName: 'Cook'
+    //   }
+    // ]
+    // const fullNames = users.map(user => {  // 'user' is each index in the array (name chosen by me)
+    //   return `${user.firstName} ${user.lastName}`
+    // })
+    // console.log(fullNames)
+
+    /* --------------------------------------- */
+    // Example 4: Return an array with another field "votingEligibility" in the user object, with a value of "ELIGIBLE" or "NOT ELIGIBLE"
+    // Expected output (O/P): [{ firstName: 'Yaritza', lastName: 'Hernandez', age: 17, votingEligibility: 'NOT ELIGIBLE' }, ... ]
+    // const users = [
+    //   {
+    //     firstName: 'Yaritza',
+    //     lastName: 'Hernandez',
+    //     age: 17
+    //   },
+    //   {
+    //     firstName: 'Madeline',
+    //     lastName: 'WG',
+    //     age: 21
+    //   },
+    //   {
+    //     firstName: 'Mary',
+    //     lastName: 'Moreno',
+    //     age: 19
+    //   },
+    //   {
+    //     firstName: 'Kelly',
+    //     lastName: 'Cook',
+    //     age: 18
+    //   }
+    // ]
+
+    // const result = users.map(user => {
+    //   user.votingEligibility = user.age >= 18 ? "ELIGIBLE" : "NOT ELIGIBLE"
+    //   return user
+    // })
+
+    // const result = users.map(user => {
+    //   const newUser = { ...user }
+    //   newUser.votingEligibility = newUser.age >= 18 ? "ELIGIBLE" : "NOT ELIGIBLE"
+    //   return newUser
+    // })
+    // console.log(result)
+
+    /* --------------------------------------- */
+    // Example 5: Return an array with "EVEN"/"ODD" string for given set on input elements in the array 
+    // Expected O/P: ["EVEN", "ODD", "EVEN", "EVEN", "ODD"]
+    // const arr = [2, 5, 8, 10, 11]
+    // const result = arr.map(e => {
+    //   return e % 2 == 0 ? "EVEN" : "ODD"
+    // })
+    // const result = arr.map(e => e % 2 == 0 ? "EVEN" : "ODD")
+    // console.log(result)
+
+    /* ------------------------------------------------------------------ */
+    // Example 1: Determine if at least one even number exists in the array
+    // const arr = [3, 5, 2, 1, 7]
+    // const result = arr.some(e => {
+    //   return e % 2 === 0
+    // })
+    // console.log(result)
+
+    /* ------------------------------------------------------------------ */
+    // Example 1: Determine if at least one even number exists in the array
+    // const arr = [8, 2, 4, 6, 10]
+    // const result = arr.every(e => {
+    //   return e % 2 === 0
+    // })
+    // console.log(result)
+
+    /* ------------------------------------------------------------------ */
+    // Example 1: Find the first even number in the array
+    // const arr = [99, 97, 86, 91, 75]
+    // const result = arr.find(element => {
+    //   return element % 2 == 0
+    // })
+    // console.log(result)
+
+    // const arr = [99, 97, 95, 91, 75]
+    // const result = arr.find(element => {
+    //   return element % 2 == 0
+    // })
+    // console.log(result)
+
+     /* ------------------------------------------------------------------ */
+    // Example 1: Find the index of the first even number in the array
+    // const arr = [99, 97, 86, 91, 75]
+    // const result = arr.findIndex(element => {
+    //   return element % 2 == 0
+    // })
+    // console.log(result)
+
+    // const arr = [99, 97, 95, 91, 75]
+    // const result = arr.findIndex(element => {
+    //   return element % 2 == 0
+    // })
+    // console.log(result)
   </script>
 </body>
 </html>
@@ -168,6 +302,60 @@
         - IF "true" boolean value is returned by the callback, the filtered array will have all elements
         - IF "false" boolean value is returned by the callback, the filtered array will be an empty array
         - filteredArray.length <= originalArray.length
+    3. map() ***
+      - Syntax:
+        arr.map((element, index) => {
+          // return [modifiedElement]
+        })
+      - Iterate through the elements of the array and execute callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns a modified array based on the return value provided. For each element, a modified value can be returned, which will be the element at that index in the returned array.
+      - Does NOT modify the original array
+      - Additional pointers:
+        - mappedArray.length = originalArray.length
+        - If nothing is returned in the function, undefined is the value stored at that index.
+    4. some()
+      - Syntax:
+        arr.some((element, index) => {
+          // return "condition"
+        })
+      - Iterate through the elements of the array and execute callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns a true/false based on the condition provided, if there exists "at least one element" that satisfies the condition.
+    5. every()
+      - Syntax:
+        arr.every((element, index) => {
+          // return "condition"
+        })
+      - Iterate through the elements of the array and execute callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns a true/false based on the condition provided, if "all the elements" satisfy the condition.
+    6. find()
+      - Syntax:
+        arr.find((element, index) => {
+          // return "condition"
+        })
+      - Iterate through the elements of the array and execute callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns the first element in an array that matches the condition provided. If none of the elements match the condition, then undefined is returned.
+    7. findIndex()
+      - Syntax:
+        arr.findIndex((element, index) => {
+          // return "condition"
+        })
+      - Iterate through the elements of the array and execute callback for each element
+      - Callback parameters:
+        - 1st parameter: Element
+        - 2nd parameter: Index
+      - Returns the index of the first element in an array that matches the condition provided. If none of the elements match the condition, then -1 is returned.
 
   # Additional Notes:
     - When looking for beginning max and mins, use the Number object to find positive and negative infinities.
