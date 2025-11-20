@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="color-scheme" content="dark light"> -->
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1>DOM</h1>
+    <div id="section-1" class="sections">
+      <h2 id="heading-1">Test 1</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni omnis dolorum beatae consequatur nostrum in, animi sit vitae aliquam accusantium inventore, voluptates perspiciatis aliquid cupiditate harum accusamus maiores molestiae fugiat ratione quasi eveniet, illum deleniti ab. Laudantium obcaecati est iusto.</p>
+    </div>
+    <div id="section-1" class="sections">
+      <h2 id="heading-2">Test 2</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consectetur et eligendi? Reprehenderit expedita optio libero repellendus rem sit perspiciatis tenetur doloremque repudiandae quibusdam delectus incidunt, et iure excepturi illum eligendi quos necessitatibus qui eos fuga alias, distinctio non vero. Beatae recusandae quaerat saepe cupiditate facere error distinctio adipisci mollitia.</p>
+    </div>
+
+    <div id="section-3">
+      <h2>Hobbies</h2>
+      <ul id="hobbies">
+        <li class="hobby">Swimming</li>
+        <li class="hobby">Dancing</li>
+        <li class="hobby">Singing</li>
+      </ul>
+    </div>
+
+    <div id="section-4">
+
+    </div>
+
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20241120143259875787/DOM-Tree1.webp" width="600" height="300" id="img-1">
+
+    <a href="https://www.facebook.com/" target="_blank" id="anchor-1">Facebook</a>
+
+    <form>
+      <input type="text" placeholder="Enter your name" id="name-input">
+    </form>
+    
+    <script>
+      // console.log(document.body)
+      // console.log(document.head) // Does not work using this method for some reason. Must type in "document.head" in the actual console.
+      // console.log(document.title) // Returns inner text of title element
+
+      /* ----------------------------------------------------- */
+      // console.log(document.body.children)
+      
+      /* ----------------------------------------------------- */
+      // console.log(document.head.children) // Returns HTMLCollection(length) [e1, e2, e3,...]
+
+      /* ----------------------------------------------------- */
+      // console.log(document.head.children[3]) // Returns title element of the page
+      // document.head.children[3].innerText = 'Test' //Changes title element text
+      // console.log(document.head.children[3]) // Returns new title
+
+      /* ----------------------------------------------------- */
+      // console.log(document.head.firstElementChild) // Returns first meta element
+      // console.log(document.head.lastElementChild) // Returns the title (last) element
+
+      /* ----------------------------------------------------- */
+      // console.log(document.body.firstElementChild) // Returns the h1 (first) element
+      // console.log(document.body.lastElementChild) // Returns the script (last) element
+
+      /* ----------------------------------------------------- */
+      // console.log(document.head.nextElementSibling) // Returns body element
+      // console.log(document.body.nextElementSibling) // Returns null
+      // console.log(document.title.nextElementSibling) // Returns undefined because there are not more child nodes within the head node.
+
+      /* ----------------------------------------------------- */
+      // console.log(document.getElementById('heading-1')) // Returns the entire node with that id value
+      // console.log(document.getElementById('heading-1').innerText) // Returns only the text for the node with that id value
+
+      /* ----------------------------------------------------- */
+      // document.getElementById('heading-1').innerText = 'DOM Content Manipulation' // Changes the text for the node with that id value
+      // console.log(document.getElementById('heading-1').innerText) // Returns the NEW text for the node with that id value
+
+      /* ----------------------------------------------------- */
+      // console.log(document.getElementById('section-1')) // Returns all HTML code for the node with that id value 
+      // console.log(document.getElementById('section-1').innerText) // Returns the text for all child nodes within the node of that id value
+      // console.log(document.getElementById('section-1').innerHTML) // Returns all the HTML for the node with that id value, but in the form of a string
+
+      /* ----------------------------------------------------- */
+      // console.log(document.getElementById('heading-1').innerHTML) // Returns ONLY the text for the node with that id value, as there is no HTML content within
+
+      /* ----------------------------------------------------- */
+      // document.getElementById('section-1').innerHTML = '<h2>DOM Basics</h2>' // Overwrote existing HTML with input value
+      // document.getElementById('section-1').innerHTML = `
+      //   <h2>DOM Basics</h2>
+      //   <p>Basics basics basics</p>
+      // ` // Overwrote existing HTML with input value
+
+      /* ----------------------------------------------------- */
+      // document.getElementById('hobbies').innerHTML = `
+      //   <li>Swimming</li>
+      //   <li>Dancing</li>
+      // `
+      // Added li elements to the empty ul element
+
+      /* ----------------------------------------------------- */
+      // document.getElementById('name-input').value // Returns whatever value is currently inside the form field
+      // document.getElementById('name-input').value = "Rose" // Will ensure input value is in the form field when the page loads
+
+      /* ----------------------------------------------------- */
+      // document.getElementById('img-1').width = 400 // Will change the width of the image with the page loads
+      // document.getElementById('img-1').height = 200 // Will change the height of the image with the page loads
+      // document.getElementById('img-1').src = "https://cdn.sanity.io/images/gpji8x82/production/5910b5ee6fa6049fedc86092a3bc6547d64d15b5-960x540.jpg?w=800"
+      // Will change the source of the image when the page loads
+
+      /* ----------------------------------------------------- */
+      // document.getElementById('anchor-1').href = "https://www.google.com/" // Will change the anchor href of the link when the page loads (will NOT change the hyperlink text)
+      // document.getElementById('anchor-1').innerText = "Google"
+      // Will update the text inside the anchor node (hyperlink text)
+
+      /* ----------------------------------------------------- */
+      // document.getElementById('heading-1').style.color = 'red' // Will change the color of the text when the page loads
+      // document.getElementById('heading-1').style.backgroundColor = 'black'
+      // Will update change the color of the background when the page loads, but only after converting 'background-color' to camelCase.
+
+      /* ----------------------------------------------------- */
+      // document.getElementById('section-1').style.padding = '10px'
+      // document.getElementById('section-1').style.padding = '20px 10px'
+      // document.getElementById('section-1').style.border = '1px solid black'
+      // document.getElementById('section-1').style.borderRadius = '6px'
+      // document.getElementById('section-1').style.backgroundColor = '#ADBBDA'
+      // document.getElementById('section-1').style.boxShadow = 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
+      // document.getElementById('section-1').style.border = 'none'
+
+      /* ----------------------------------------------------- */
+
+      // document.getElementById('section-1').style.cssText = `
+      //   padding: 20px 10px;
+      //   background-color: #ADBBDA;
+      //   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      //   border-radius: 6px;
+      // `
+
+      /* ----------------------------------------------------- */
+      // console.log(document.getElementsByClassName('sections')) // Returns HTMLCollection of elements with the class name of 'sections'
+      // console.log(document.getElementsByClassName('hobby')) // Returns HTMLCollection of elements with the class name of 'hobby'
+
+      // const hobbyNodes = document.getElementsByClassName('hobby')
+      // Array.from(hobbyNodes).forEach(node => { // Had to convert hobbyNodes to an array in order to use forEach()
+        // node.style.cssText = 'padding: 2px; color: blue; border: 1px solid black; border-radius: 6px; margin: 5px 0;'
+      // })
+
+      /* ----------------------------------------------------- */
+      // console.log(document.getElementsByTagName('div')) // Returns HTMLCollection of elements with the same tag name
+      // console.log(document.getElementsByTagName('li')) // Returns HTMLCollection of elements with the same tag name
+      // console.log(document.getElementsByTagName('h2')) // Returns HTMLCollection of elements with the same tag name
+
+      /* ----------------------------------------------------- */
+      const heading2 = document.createElement('h2')
+      heading2.innerText = 'Animals'
+      heading2.id = 'heading-4'
+      heading2.classList.add('headings')
+      heading2.classList.remove('headings')
+
+      const p1 = document.createElement('p')
+      p1.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni omnis dolorum beatae consequatur nostrum in, animi sit vitae aliquam accusantium inventore, voluptates perspiciatis aliquid cupiditate harum accusamus maiores molestiae fugiat ratione quasi eveniet, illum deleniti ab. Laudantium obcaecati est iusto.'
+
+      const hr1 = document.createElement('hr')
+
+      const section4 = document.getElementById('section-4')
+      section4.appendChild(heading2)
+      section4.appendChild(p1)
+      section4.append(heading2, p1, hr1)
+
+      /* ----------------------------------------------------- */
+      // const section4 = document.getElementById('section-4')
+      // section4.remove()
+
+      // document.getElementById('section-1').remove()
+
+      /* ----------------------------------------------------- */
+
+    </script>
+  </body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # DOM (Document Object Model)
+    - Refers to the object representation of the HTML 'document tree'
+    - Reserved keyword: document
+    - Nodes: Represent individual elements in the DOM tree
+
+    - Properties:
+      - body: Returns the body node of the HTML document
+      - head: Returns the head node of the HTML document
+      - title: Returns the title node of the HTML document
+      (CANNOT directly access child nodes further than this)
+      - children: Returns all child nodes of given node
+      - firstElementChild: Returns the first child node of a given node
+      - lastElementChild: Returns the first child node of a given node
+      - nextElementSibling: Returns the next sibling element of a given node
+
+    - Methods (DOM selectors)
+      - getElementById('id') **: Returns the node with the specified 'id' value
+      - getElementsByClassName('class') **: Returns an HTMLCollection (array of nodes) which has the specified 'class'
+      - getElementsByTagName('tag') **: Returns an HTMLCollection (array of nodes) which use the specified 'tag'
+
+    - DOM Content Manipulations (Access/Update)
+      - innerText: Refers to the inner text content of the node
+      - innerHTML: Refers to the inner HTML content of the node
+      (May behave like innerText if there is only text content inside the node)
+      - value: Refers to the data entered within the form field node
+
+    - DOM Attribute Manipulation (Access/Update)
+      - Syntax: node.attributeName
+      - 'class' attribute:
+        - node.classList: Refers to the collection of classes assigned to a specific node
+          - node.classList.add('newClass'): Add a class
+          - node.classList.remove('existingClass'): Remove a class
+
+    - DOM Style Manipulations (Access/Update)
+      - Single Style property
+        - Syntax: node.style.propertyName (convert "-" properties to camelCase)
+      - Multiple Style properties
+        - Syntax: node.style.cssText = 'property1: value 1; property2: value2;' (no camelCase conversions)
+
+    - DOM Node Manipulation (Access/Update)
+      - document.createElement('tag'): Create a new node based on the HTML tag provided
+      - node.appendChild(childNode): Append the child node to the specified node
+      - node.append(childNode1, childNode2, ...): Appends multiple child notes to the specified node
+      - node.remove(): Remove the specified node from the DOM
+
+
+  # Additional Notes:
+    - BOM (Browser Object Model)
+      - Reserved keyword: window
+*/
+</pre>
