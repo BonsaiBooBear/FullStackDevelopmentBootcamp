@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Forms Validation</title>
+    <script src="https://kit.fontawesome.com/cc383de1b1.js" crossorigin="anonymous"></script>
+    <style>
+      form {
+        background-color: cadetblue;
+        padding: 1em;
+        border-radius: 6px;
+        width: max-content;
+        margin: 2em auto;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      form h2 {
+        margin: 0 0 0.5em;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      /* Child Combinator (>) to ensure only the direct descendant is selected */
+      form > div {
+        margin: 1em 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+      }
+
+      form input{
+        border: none;
+        border-radius: 2px;
+        font-size: 0.75em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Forms Validation</h1>
+    <form>
+      <h2>Registration Form</h2>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter your full name" id="name" autocomplete="off">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="text" placeholder="Enter your email" id="email" autocomplete="off">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter your password" id="password" autocomplete="off">
+      </div>
+      <div>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" placeholder="Re-enter your password" id="confirm-password" autocomplete="off">
+      </div>
+      <div>
+        <label>Gender</label>
+        <div>
+          <input type="radio" name="gender" value="male" class="gender">Male
+          <input type="radio" name="gender" value="female" class="gender">Female
+          <input type="radio" name="gender" value="other" class="gender">Other
+        </div>
+      </div>
+      <div>
+        <label>Hobbies</label>
+        <div>
+          <input type="checkbox" name="hobby" value="swim" class="hobby">Swim
+          <input type="checkbox" name="hobby" value="dance" class="hobby">Dance
+          <input type="checkbox" name="hobby" value="sing" class="hobby">Sing
+        </div>
+      </div>
+      <div style="justify-content: center;">
+        <button type="button" onclick="handleFormData()">Submit</button>
+      </div>
+    </form>
+
+    <script>
+      function handleFormData() {
+        const name = document.getElementById('name').value
+        const email = document.getElementById('email').value
+        const password = document.getElementById('password').value
+        const confirmPassword = document.getElementById('confirm-password').value
+
+        const genderOptions = document.getElementsByClassName('gender')
+        const selectedGender = Array.from(genderOptions).find(genderOption => {
+          return genderOption.checked == true
+        })
+
+        const hobbyOptions = document.getElementsByClassName('hobby')
+        const selectedHobbies = Array.from(hobbyOptions).filter(hobbyOption => {
+          return hobbyOption.checked
+        }).map(h => h.value) // same as selectedHobbies = selectedHobbies.map (h => { return h.value })
+
+        const userData = { name, email, password, confirmPassword, gender: selectedGender && selectedGender.value, hobbies: selectedHobbies }
+        console.log('User data collected', userData)
+      }
+    </script>
+  </body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  #  
+*/
+</pre>

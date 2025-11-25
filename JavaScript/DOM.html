@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="color-scheme" content="dark light"> -->
+    <meta name="color-scheme" content="dark light">
     <title>DOM</title>
   </head>
   <body>
@@ -109,6 +109,7 @@
 
       /* ----------------------------------------------------- */
       // document.getElementById('anchor-1').href = "https://www.google.com/" // Will change the anchor href of the link when the page loads (will NOT change the hyperlink text)
+      document.getElementById('anchor-1').target = "_blank" 
       // document.getElementById('anchor-1').innerText = "Google"
       // Will update the text inside the anchor node (hyperlink text)
 
@@ -201,7 +202,7 @@
     - Methods (DOM selectors)
       - getElementById('id') **: Returns the node with the specified 'id' value
       - getElementsByClassName('class') **: Returns an HTMLCollection (array of nodes) which has the specified 'class'
-      - getElementsByTagName('tag') **: Returns an HTMLCollection (array of nodes) which use the specified 'tag'
+      - getElementsByTagName('tag') **: Returns an HTMLCollection (array of nodes) which use the specified 'tag' such as h1, body, p, etc.
 
     - DOM Content Manipulations (Access/Update)
       - innerText: Refers to the inner text content of the node
@@ -226,7 +227,7 @@
       - document.createElement('tag'): Create a new node based on the HTML tag provided
       - node.appendChild(childNode): Append the child node to the specified node
       - node.append(childNode1, childNode2, ...): Appends multiple child notes to the specified node
-      - node.remove(): Remove the specified node from the DOM
+      - node.remove(): Remove/Delete the specified node from the DOM
 
 
   # Additional Notes:

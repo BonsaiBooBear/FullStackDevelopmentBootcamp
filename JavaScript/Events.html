@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Events</title>
+    <script src="https://kit.fontawesome.com/cc383de1b1.js" crossorigin="anonymous"></script>
+  </head>
+  <body<!-- onload="test()"-->>
+    <h1>Events</h1>
+    <!-- <input type="text" onclick="console.log('Hi')"> -->
+    <!-- <input type="text" ondblclick="console.log('Hi')"> -->
+    <!-- <input type="text" onmouseover="console.log('Hi')"> -->
+    <!-- <input type="text" onmouseout="test()"> -->
+    <!-- <input type="text" onmouseover="console.log('IN')" onmouseout="console.log('OUT')"> -->
+    <!-- <input type="text" onclick="test()"> -->
+    <!-- <input type="text" onmousemove="test()"> -->
+    <!-- <input type="text" oninput="test()"> -->
+    <!-- <input type="text" id="password-input" oninput="checkPasswordStrength()"> -->
+    <input type="text" onchange="test()">
+
+    <!-- <button onclick="alert('You have clicked on the button')">Click here for alert</button> -->
+
+    <!-- <input id="password-input" type="password">
+    <button id="visibility-btn" onclick="togglePasswordVisibility()"><i class="fa-regular fa-eye"></i></button> -->
+
+    <!-- <input type="text" onkeydown="test()"> -->
+    <!-- <input type="text" onkeyup="test()"> -->
+    <!-- <input type="text" onkeypress="test()"> -->
+
+    <!-- <input type="text"><br> // tab key on keyboard is also an 'onfocus' event -->
+    <!-- <input type="text" onfocus="test()"> -->
+    <!-- <input type="text" onblur="test()"> -->
+
+    <script>
+      function test() {
+        console.log('test')
+      }
+      // function checkPasswordStrength() {
+      //   const password = document.getElementById('password-input').value
+      //   console.log(password)
+      // }
+      // function togglePasswordVisibility() {
+      //   const password = document.getElementById('password-input')
+      //   const visibilityBtn = document.getElementById('visibility-btn')
+      //   if(password.type == 'password') {
+      //     password.type = 'text'
+      //     visibilityBtn.innerHTML = '<i class="fa-regular fa-eye-slash"></i>'
+      //   } else {
+      //     password.type = 'password'
+      //     visibilityBtn.innerHTML = '<i class="fa-regular fa-eye"></i>'
+      //   }
+      // }
+    </script>
+  </body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Events: Any activity (no matter how minute) performed by the user on the browser, Any occurrence in the browser
+
+  # Event Handling: Create a logic which executes whenever a specific event has occurred
+    - 2 ways to handle events:
+      - Inline event handlers
+      - Event listeners (addEventListener)
+
+  # Inline event handlers:
+    - Used as attributes within HTML tags
+    - Syntax: &lt;tag eventhandler="[JS LOGIC]">&lt;/tag>
+
+    - Examples:
+      - onclick: 'click' event ***
+      - ondblclick: 'dblclick' event (double-click)
+      - onmouseover: 'mouseover' event (hover) ***
+      - onmouseout: 'mouseout' event (opposite of hover)
+      - onmousemove: 'mousemove' event (cursor minute movement)
+      - oninput: 'input' event (any input change [type/delete] within a text field) ***
+      - onchange: 'change' event (any change in input after focus and blur event)
+      - onkeydown: 'keydown' event (press key downward) ***
+      - onkeyup: 'keyup' event (key release upward)
+      - onkeypress: 'keypress' event (key press for a short moment) [DEPRECATED]
+      - onfocus: 'focus' event (Element gets focused, mainly form fields) ***
+      - onblur: 'blur' event (Element gets blurred) ***
+      - onload: 'load' event (HTML document loads) ***
+      
+*/
+</pre>
