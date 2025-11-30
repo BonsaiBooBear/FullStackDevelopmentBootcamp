@@ -73,6 +73,19 @@
           <input type="checkbox" name="hobby" value="sing" class="hobby">Sing
         </div>
       </div>
+      <div>
+        <label>Bio</label>
+        <textarea rows="5" placeholder="Enter your bio" id="bio"></textarea>
+      </div>
+      <div>
+        <label>Education</label>
+        <select id="education">
+          <option value="">Select</option>
+          <option value="POST GRADUATE">Post Graduate</option>
+          <option value="GRADUATE">Graduate</option>
+          <option value="UNDER GRADUATE">Under Graduate</option>
+        </select>
+      </div>
       <div style="justify-content: center;">
         <button type="button" onclick="handleFormData()">Submit</button>
       </div>
@@ -95,9 +108,85 @@
           return hobbyOption.checked
         }).map(h => h.value) // same as selectedHobbies = selectedHobbies.map (h => { return h.value })
 
-        const userData = { name, email, password, confirmPassword, gender: selectedGender && selectedGender.value, hobbies: selectedHobbies }
+        const bio = document.getElementById("bio").value
+        const education = document.getElementById("education").value
+
+        const userData = { name, email, password, confirmPassword, gender: selectedGender && selectedGender.value, hobbies: selectedHobbies, bio, education }
+
         console.log('User data collected', userData)
+
+        const result = validateFormData(userData)
+        console.log(result)
       }
+
+      function validateFormData(userData) {
+        const {name, email, password, confirmPassword, gender, hobbies, bio, education} = userData
+
+        // 1. NAME
+        if(!name || name.length < 3) { // Not empty and at least 3 characters
+          return 'Invalid name'
+        }
+
+        for (let i=0; i<name.length; i++) { // No special characters or digits
+          if(name[i] >= '!' && name[i] <= '@') { //ASCII 33-64
+            return 'Invalid name' 
+          }
+        }
+
+        // 2. EMAIL
+        if(!email || !email.includes('@') || !email.includes('.') || email.indexOf('@') < 2) {
+          return 'Invalid email'
+        }
+
+        const lastDotIndex = email.lastIndexOf('.')
+        const lastCharIndex = email.length-1
+        if(lastCharIndex - lastDotIndex > 3) {
+          return 'Invalid email'
+        }
+
+        // const parts = email.split('.')
+        // const last = parts[part.length-1]
+        // if(las.length > 3) {
+        //   return 'Invalid email'
+        // }
+
+        
+        // 3. PASSWORD & CONFIRMED PASSWORD
+        if(!password) {
+          return 'Please enter Password'
+        }
+        
+        if (!confirmPassword) {
+          return 'Please confirm the Password'
+        }
+        
+        if (password != confirmPassword) {
+          return 'Passwords do not match'
+        }
+
+        // 4. GENDER
+        if(!gender) {
+          return 'Please select Gender'
+        }
+
+        // 5. HOBBIES
+        if(!hobbies.length) {
+          return 'Please select at least 1 Hobby'
+        }
+
+        // 6. BIO
+        if(!bio || bio.length < 100) {
+          return 'Invalid Bio'
+        }
+
+        // 7. EDUCATION
+        if(!education) {
+          return 'Please select level of Education'
+        }
+
+        return 'FORM VALIDATED SUCCESSFULLY'
+      }
+
     </script>
   </body>
 </html>
@@ -107,6 +196,27 @@
 <h2>Notes From Live Session</h2>
 <pre>
 /*
-  #  
+  #  Validation rules:
+    1. Name:
+      - Cannot be empty
+      - At least 3 characters
+      - No special characters
+      - No digits
+    2. Email
+      - Cannot be empty
+      - Should have @
+      - Should have .
+      - At most 3 characters after .
+      - At least 2 characters before @
+    3. Password (Password Strength Checker Project)
+    4. Gender (1 selection)
+    5. Hobbies (1 selection)
+    6. Bio
+      - Cannot be empty
+      - At least 100 characters
+    7. Education (1 selection)
+
+
+
 */
 </pre>
