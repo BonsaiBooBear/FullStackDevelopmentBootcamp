@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Event Listeners</title>
+    <script src="https://kit.fontawesome.com/cc383de1b1.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Event Listeners</h1>
+
+    <input type="text" id="test-input" autocomplete="off">
+
+    <input type="range" min="0" max="600" id="range-input" style="position: fixed; top: 0;" value="0">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id provident doloribus architecto sint vel sunt aperiam dolorum maiores non ipsam ullam eius dignissimos unde tenetur modi aut enim sed harum beatae voluptate omnis veniam, placeat perspiciatis doloremque. Neque voluptates sint, autem nisi molestiae inventore ullam! Aut blanditiis maiores itaque praesentium unde cumque exercitationem assumenda a reprehenderit inventore beatae distinctio eveniet, error, quisquam, ad necessitatibus esse nam eum ipsam? Cumque consequatur consequuntur, eos placeat, cum dolores omnis ex maiores quas sequi architecto voluptatum? Temporibus minima eius, reiciendis in facere doloribus recusandae possimus voluptatum quam dolorum cupiditate. Saepe, voluptatibus voluptas corrupti nulla aliquid cum laudantium ducimus ut magni sed officiis culpa sit fugit qui repellendus hic explicabo nemo eligendi voluptate facilis ratione consectetur dolorem. Eligendi distinctio quidem fuga eum non ab nisi laboriosam laudantium deleniti odit ex quod eveniet a harum doloremque, corporis tempora officia nam labore enim quibusdam? Similique soluta repellat necessitatibus impedit exercitationem illo eius quisquam. Esse commodi error aspernatur consectetur adipisci illum, reprehenderit maiores minus quidem impedit assumenda quos sed vel, incidunt id fugiat delectus corporis itaque velit odio tempore beatae placeat vitae saepe! Ullam, unde vitae, ipsum earum debitis, ipsam ab similique sed vel sunt iste? Laudantium a, harum quae sequi perferendis labore nihil. Similique consequatur aperiam necessitatibus debitis voluptates aut exercitationem unde impedit fugiat illum corporis tenetur obcaecati, accusamus magnam et fuga ducimus cumque nisi quidem neque saepe. Obcaecati rerum cumque officia modi minus praesentium, fugit quod beatae optio neque in, laboriosam dolorum saepe. Earum, excepturi! Numquam neque delectus expedita ducimus blanditiis iure asperiores doloribus, cupiditate dolores voluptatum sapiente inventore beatae adipisci tenetur hic qui ad reprehenderit quod esse alias deleniti dolorem mollitia natus. Facere pariatur laboriosam quo corporis! Obcaecati eveniet, fugiat doloremque impedit ducimus beatae perferendis natus, deleniti quasi voluptas voluptates pariatur error nesciunt laborum dolores quo sapiente provident quibusdam. Quia, consequatur repudiandae esse iusto, nemo voluptates nam recusandae modi animi eligendi vel quis voluptas architecto repellat unde aliquam sed nisi, cupiditate totam commodi! Nesciunt, cupiditate, voluptas rem distinctio nisi blanditiis porro perferendis eveniet recusandae, laborum doloribus placeat ducimus odio numquam libero unde minus. Ipsum sapiente veritatis nemo dolores? Cupiditate debitis ipsa dolorem expedita reprehenderit est ex neque, aliquam a, veniam tempore ipsam? Possimus sed voluptas dicta aperiam ipsam! Esse saepe provident quidem soluta unde dolores, est cupiditate inventore reiciendis ad! Ratione aliquid impedit sint! Unde, voluptatibus aperiam. Illo laudantium, tempora blanditiis quas ab quae sed deserunt dolorem doloribus qui ullam ratione obcaecati culpa eum, laboriosam architecto eligendi placeat in officia soluta! Ut tenetur veritatis nostrum ipsa praesentium eveniet voluptas deserunt. Libero, magni tempore? Magni cupiditate quia aliquid quasi distinctio totam earum ad ex? Labore, blanditiis veritatis voluptate quam, itaque odit maxime iure quisquam beatae sunt corrupti quia doloribus eum voluptatibus aliquam. Iusto similique consequuntur officiis natus ex eos, quibusdam suscipit enim sit perferendis, inventore quos cupiditate error numquam. Expedita esse cum ad, eum pariatur, consectetur itaque nisi voluptate rem ratione veritatis nulla iusto amet id sint temporibus excepturi. Aut sed dicta repellat nulla, ex quaerat.</p>
+
+    <script>
+      const inputElement = document.getElementById('test-input')
+      
+      // inputElement.addEventListener('click', (event) => {
+      //   console.log('test', event)
+      // })
+
+      /* -------------------------------------------------------- */
+
+      // inputElement.addEventListener('input', (event) => {
+      //   console.log('test', event.target.value)
+      // })
+
+      /* -------------------------------------------------------- */
+
+      // inputElement.addEventListener('dblclick', (event) => {
+      //   console.log('test', event)
+      // })
+
+      /* -------------------------------------------------------- */
+
+      // inputElement.addEventListener('mouseover', (event) => {
+      //   console.log('test', event)
+      // })
+
+      /* -------------------------------------------------------- */
+
+      // inputElement.addEventListener('mousemove', (event) => {
+      //   console.log('test', event)
+      // })
+
+      // inputElement.addEventListener('mousemove', (event) => {
+      //   console.log('test', event.screenX, event.screenY)
+      // })
+
+      /* -------------------------------------------------------- */
+
+      // inputElement.addEventListener('change', (event) => {
+      //   console.log('test', event.target.value)
+      // })
+
+      /* -------------------------------------------------------- */
+
+      // inputElement.addEventListener('keydown', (event) => {
+      //   console.log('test', event)
+      // })
+
+      // inputElement.addEventListener('keydown', (event) => {
+      //   console.log('test', event.key)
+      // })
+
+      // let speed = 0
+      // inputElement.addEventListener('keydown', (event) => {
+      //   switch(event.key) {
+      //     case "ArrowUp":
+      //       speed += 10
+      //       console.log(`ACCELERATING ... ${speed}mph`)
+      //       break;
+      //     case "ArrowDown":
+      //       if(speed > 0) {
+      //         speed -= 10
+      //         console.log(`BRAKING ... ${speed}mph`)
+      //       }
+      //       break;
+      //     case "ArrowLeft":
+      //       console.log('TURNING LEFT ...')
+      //       break;
+      //     case "ArrowRight":
+      //       console.log('TURNING RIGHT ...')
+      //       break
+      //   }
+      // })
+      
+      /* -------------------------------------------------------- */
+
+      document.addEventListener('scroll', (event) => {
+        console.log('SCROLLED', window.scrollY)
+        document.getElementById('range-input').value = window.scrollY
+      })
+    </script>
+  </body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  #  Event Listeners:
+    - Create a logic which executes whenever a specific event has occurred
+    - Using the .addEventListener() method
+    - Syntax:
+      element.addEventListener('event', function(event) {
+        // Logic to be executed when the event is fired
+      })
+      - Callback parameter: 'event' object
+        - .type: Name of the event
+        - .target: The element/node where the event occurred
+        - .target.value: Access value of the "input text"
+
+    - Examples:
+      - onclick: 'click' event ***
+      - ondblclick: 'dblclick' event (double-click)
+      - onmouseover: 'mouseover' event (hover) ***
+      - onmouseout: 'mouseout' event (opposite of hover)
+      - onmousemove: 'mousemove' event (cursor minute movement)
+      - oninput: 'input' event (any input change [type/delete] within a text field) ***
+      - onchange: 'change' event (any change in input after focus and blur event)
+      - onkeydown: 'keydown' event (press key downward) ***
+      - onkeyup: 'keyup' event (key release upward)
+      - onkeypress: 'keypress' event (key press for a short moment) [DEPRECATED]
+      - onfocus: 'focus' event (Element gets focused, mainly form fields) ***
+      - onblur: 'blur' event (Element gets blurred) ***
+      - onload: 'load' event (HTML document loads) ***
+*/
+</pre>
