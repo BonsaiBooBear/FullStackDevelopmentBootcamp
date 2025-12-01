@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Event Bubbling</title>
+    <script src="https://kit.fontawesome.com/cc383de1b1.js" crossorigin="anonymous"></script>
+    <style>
+      div {
+        padding: 1em;
+        margin: 1em;
+        color: black;
+      }
+
+      #grandparent {
+        background-color: cadetblue;
+      }
+
+      #parent {
+        background-color: aquamarine;
+      }
+
+      #child {
+        background-color: azure;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Event Bubbling</h1>
+
+    <div id="grandparent">
+      GRANDPARENT
+      <div id="parent">
+        PARENT
+        <div id="child">
+          CHILD
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const grandparent = document.getElementById('grandparent')
+      const parent = document.getElementById('parent')
+      const child = document.getElementById('child')
+
+      // Bubbling Phase (child -> grandparent)
+      // grandparent.addEventListener('click', (event)=> {
+      //   console.log('GRANDPARENT CLICK')
+      // })
+
+      // parent.addEventListener('click', (event)=> {
+      //   console.log('PARENT CLICK')
+      //   event.stopPropagation()
+      // })
+
+      // child.addEventListener('click', (event)=> {
+      //   console.log('CHILD CLICK')
+      //   event.stopPropagation()
+      // })
+
+      // Capturing Phase (grandparent -> child)
+      grandparent.addEventListener('click', (event)=> {
+        console.log('GRANDPARENT CLICK')
+      }, true)
+
+      parent.addEventListener('click', (event)=> {
+        console.log('PARENT CLICK')
+      }, true)
+
+      child.addEventListener('click', (event)=> {
+        console.log('CHILD CLICK')
+      }, true)
+
+    </script>
+  </body>
+</html>
+<br><br><br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  #  Event Propagation: Process by which events are handled and propagated through the DOM tree (Applicable for nested elements)
+    - 2 Phases
+      - Even Capturing: Event is propagated from last ancestor to the child node, and so on, until the target element.
+      - Event Bubbling ***: Even is propagated (spread) from target node to the parent node, and so on, until the last ancestor element.
+
+    - Stop Event Propagation
+      - event.stopPropagation()
+*/
+</pre>
