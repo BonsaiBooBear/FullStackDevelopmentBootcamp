@@ -49,9 +49,83 @@
       </div>
       <div class="col-8">
         <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="account-summary" role="tabpanel" aria-labelledby="account-summary-list">Account Summary</div>
-          <div class="tab-pane fade" id="transfer-in" role="tabpanel" aria-labelledby="transfer-in-list">Transfer In</div>
-          <div class="tab-pane fade" id="transfer-out" role="tabpanel" aria-labelledby="transfer-out-list">Transfer Out</div>
+          <!-- ACCOUNT SUMMARY -->
+          <div class="tab-pane fade show active" id="account-summary" role="tabpanel" aria-labelledby="account-summary-list">
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="https://reqres.in/img/faces/5-image.jpg" class="img-fluid rounded-start" alt="..." style="height: 100%; width: 100%">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p class="card-text mb-0"><small class="text-body-secondary">Account details</small></p>
+                    <p class="card-text">
+                      Account Number: <span id="account-no-text">*********866</span> 
+                      <i class="fa-solid fa-eye" id="see-account-number" title="show"></i><br>
+                      Account Holder Name: Rebecca
+                    </p>
+                    <p class="card-text mb-0"><small class="text-body-secondary">Account balance</small></p>
+                    <p class="card-text fs-1" id="account-balance"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                   Account Statement
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show p-2" data-bs-parent="#accordionExample">
+                  <div class="list-group" id="transaction-list">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- TRANSFER IN -->
+          <div class="tab-pane fade" id="transfer-in" role="tabpanel" aria-labelledby="transfer-in-list">
+            <h2 class="display-4">Transfer In</h2>
+            <div class="mb-3">
+              <label for="amount-to-deposit" class="form-label">Amount to transfer</label>
+              <input type="number" class="form-control" id="amount-to-deposit" placeholder="Amount">
+            </div>
+            <button type="button" class="btn btn-dark" onclick="deposit()">Deposit</button>
+            <div id="deposit-successful"></div>
+          </div>
+
+          <!-- TRANSFER OUT -->
+          <div class="tab-pane fade" id="transfer-out" role="tabpanel" aria-labelledby="transfer-out-list">
+            <h2 class="display-4">Transfer out</h2>
+            <form id="send-money-form">
+              <select class="form-select" aria-label="Default select example" id="transfer-type">
+                <option value="Wire">Wire</option>
+                <option value="ACH">ACH</option>
+              </select>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Beneficiary Name</label>
+                <input type="text" class="form-control" id="beneficiary-name" placeholder="Beneficiary Name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Beneficiary Account Number</label>
+                <input type="number" class="form-control" id="beneficiary-account" placeholder="Beneficiary Account Number">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Amount to transfer</label>
+                <input type="number" class="form-control" id="amount-to-transfer" placeholder="Amount">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Purpose of transfer</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Purpose of transfer">
+              </div>
+              <button type="button" class="btn btn-dark" onclick="sendMoney()">Send money</button>
+              <div id="transfer-successful"></div>
+            </form>
+          </div>
+          </div>
         </div>
       </div>
     </div>
