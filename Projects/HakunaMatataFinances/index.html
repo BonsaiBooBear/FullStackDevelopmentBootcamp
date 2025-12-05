@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakuna Matata Finances</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/cc383de1b1.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="main-logo">
+    <div class="w-100 d-flex justify-content-center">
+      <img src="assets/fullHMFLogo.svg" class="p-1 w-25 m-0 d-block">
+    </div>
+    <div class="w-100 d-flex justify-content-between">
+      <div class="fs-6 fw-semibold ms-4">Welcome, <span id="username">Heather</span>!</div>
+      <div class="fs-6 me-4">Account Number: <span id="account-no-text">*********866</span><i class="fa-solid fa-eye ms-1" id="see-account-number" title="show"></i></div>
+    </div>
+  </div>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg border-bottom border-top border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house me-1"></i>Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-arrow-right-arrow-left me-1"></i>Transfers</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Internal Transfers</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>External Transfers</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-comments me-1"></i>Message Portal</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-user me-1"></i>Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket me-1"></i>Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="d-flex justify-content-center">
+    <div class="accordion my-4 w-75" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+            Checking & Savings
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            <div class="account-info">
+              <div class="account-type">
+                <strong><a href="#">Savings</a></strong>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Available Balance</div>
+                <div>$495.00</div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Current Balance</div>
+                <div>$500.00</div>
+              </div>
+            </div>
+            <div class="account-info">
+              <div class="account-type">
+                <strong><a href="checking.html">Checking</a></strong>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Available Balance</div>
+                <div>$500.00</div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Current Balance</div>
+                <div>$500.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+            Credit Cards
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="account-info">
+              <div class="account-type d-flex justify-content-between">
+                <div><strong><a href="#">Platinum Rewards</a></strong></div>
+                <div class="due-date text-muted fs-6"><i>Rewards Balance: 138,625 pts</i></div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Available Balance</div>
+                <div>$8,284.36</div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Current Balance</div>
+                <div>$1,715.64</div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Credit Limit</div>
+                <div>$10,000.00</div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom text-danger">
+                <div>Payment Due Date</div>
+                <div>11/30/2025</div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom text-danger">
+                <div>Past Due Amount</div>
+                <div>$289.74</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+            Loans
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="account-info">
+              <div class="account-type d-flex justify-content-between">
+                <div><strong><a href="#">Auto Loan</a></strong></div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Current Balance</div>
+                <div>$12,954.85</div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Monthly Payment</div>
+                <div>$482.16</div>
+              </div>
+              <div class="balance-info d-flex justify-content-between border-bottom">
+                <div>Next Due Date</div>
+                <div>12/15/2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>

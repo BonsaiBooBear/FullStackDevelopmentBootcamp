@@ -1,0 +1,48 @@
+#see-account-number {
+  cursor: pointer;
+}
+
+body {
+  background-color: #028553;
+  color: white;
+  font-family: "Lexend", sans-serif;
+}
+
+a {
+  color: #BB3D02;
+}
+
+#username, #account-no-text {
+  color: #F6CE00;
+}
+
+#main-logo, nav, .navbar .dropdown-menu, .accordion-button {
+  background-color: #1C0001 !important;
+  color: white !important;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.accordion-button:not(.collapsed)::after, .accordion-button.collapsed::after {
+    filter: invert(50%);
+}
+
+.account-info {
+  margin-bottom: 1rem;
+}
+
+.account-type {
+  font-size: 105%;
+  margin-bottom: 0.5rem;
+}
+
+.balance-info {
+  margin-left: 1rem;
+}
