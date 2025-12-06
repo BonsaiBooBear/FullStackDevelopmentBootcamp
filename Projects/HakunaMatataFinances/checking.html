@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<div>
   <div id="main-logo">
     <div class="w-100 d-flex justify-content-center">
       <img src="assets/fullHMFLogo.svg" class="p-1 w-25 m-0 d-block">
@@ -30,18 +30,18 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house me-1"></i>Home</a>
+            <a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i>Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-arrow-right-arrow-left me-1"></i>Transfers</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Internal Transfers</a></li>
+            <ul class="dropdown-menu" role="tablist">
+              <li><a class="dropdown-item" data-bs-toggle="tab" data-bs-target="#transfer-in" role="tab"><i class="fa-solid fa-arrow-right-to-bracket me-1"></i>Transfers In</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>External Transfers</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="tab" data-bs-target="#transfer-out" role="tab"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>External Transfers</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-comments me-1"></i>Message Portal</a>
+            <a class="nav-link" href="messages.html"><i class="fa-solid fa-comments me-1"></i>Message Portal</a>
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0">
@@ -58,100 +58,107 @@
 
   <!-- MAIN -->
   <div class="container my-4">
-    <div class="row">
-      <div class="col-4">
+    <!-- <div class="row">
+      <div class="col-3">
         <div class="list-group" id="list-tab" role="tablist">
           <a class="list-group-item list-group-item-action list-group-item-secondary active" id="account-summary-list" data-bs-toggle="list" href="#account-summary" role="tab" aria-controls="account-summary">Account Summary</a>
           <a class="list-group-item list-group-item-action list-group-item-secondary" id="transfer-in-list" data-bs-toggle="list" href="#transfer-in" role="tab" aria-controls="transfer-in">Transfer In</a>
           <a class="list-group-item list-group-item-action list-group-item-secondary" id="transfer-out-list" data-bs-toggle="list" href="#transfer-out" role="tab" aria-controls="transfer-out">Transfer Out</a>
         </div>
-      </div>
-      <div class="col-8">
-        <div class="tab-content" id="nav-tabContent">
-          <!-- ACCOUNT SUMMARY -->
-          <div class="tab-pane fade show active" id="account-summary" role="tabpanel" aria-labelledby="account-summary-list">
-            <div class="card mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="https://reqres.in/img/faces/5-image.jpg" class="img-fluid rounded-start" alt="..." style="height: 100%; width: 100%">
+      </div> -->
+      <div class="d-flex justify-content-center">
+        <div class="col-12 col-md-8">
+          <div class="tab-content" id="nav-tabContent">
+            <!-- ACCOUNT SUMMARY -->
+            <a id="account-summary-toggle" data-bs-toggle="tab" data-bs-target="#account-summary" hidden></a>
+            <div class="tab-pane fade show active" id="account-summary" role="tabpanel">
+              <div class="card mb-3 bg-transparent border-0">
+                <div class="d-flex flex-column flex-md-row gap-3 align-items-center">
+                  <div id="card-img" class="w-100">
+                    <img src="assets/HMFCard.svg" class="img-fluid w-100">
+                  </div>
+                  <div id="card-details" class="d-block w-100">
+                    <div class="card-body rounded bg-white h-100">
+                      <h5 class="card-title">Card Details</h5>
+                      <p class="card-text mb-0"><small class="text-body-secondary">Account details</small></p>
+                      <p class="card-text">
+                        Cardholder: Heather Rose<br>
+                        Account Number: <span id="card-no-text">*********204</span>
+                        <i class="fa-solid fa-eye" id="see-card-number" title="show"></i>
+                      </p>
+                      <p class="card-text mb-0"><small class="text-body-secondary">Account balance</small></p>
+                      <p class="card-text fs-1" id="account-balance"></p>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <p class="card-text mb-0"><small class="text-body-secondary">Account details</small></p>
-                    <p class="card-text">
-                      Account Number: <span id="account-no-text">*********866</span> 
-                      <i class="fa-solid fa-eye" id="see-account-number" title="show"></i><br>
-                      Account Holder Name: Rebecca
-                    </p>
-                    <p class="card-text mb-0"><small class="text-body-secondary">Account balance</small></p>
-                    <p class="card-text fs-1" id="account-balance"></p>
+              </div>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Account Statement
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show p-2" data-bs-parent="#accordionExample">
+                    <div class="list-group" id="transaction-list">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                   Account Statement
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show p-2" data-bs-parent="#accordionExample">
-                  <div class="list-group" id="transaction-list">
-                  </div>
+
+            <!-- TRANSFER IN -->
+            <div class="tab-pane fade" id="transfer-in" role="tabpanel">
+              <h2 class="display-4">Transfer In</h2>
+              <div class="mb-3">
+                <label for="amount-to-deposit" class="form-label">Amount to transfer</label>
+                <input type="number" class="form-control" id="amount-to-deposit" placeholder="Amount">
+              </div>
+              <button type="button" class="btn btn-dark" onclick="deposit()">Deposit</button>
+              <div id="deposit-successful"></div>
+              <a class="btn btn-success mt-3 back-to-summary">
+                ← Back to Account Summary
+              </a>
+            </div>
+
+            <!-- TRANSFER OUT -->
+            <div class="tab-pane fade" id="transfer-out" role="tabpanel">
+              <h2 class="display-4">Transfer out</h2>
+              <form id="send-money-form">
+                <select class="form-select" aria-label="Default select example" id="transfer-type">
+                  <option value="Wire">Wire</option>
+                  <option value="ACH">ACH</option>
+                </select>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Beneficiary Name</label>
+                  <input type="text" class="form-control" id="beneficiary-name" placeholder="Beneficiary Name">
                 </div>
-              </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Beneficiary Account Number</label>
+                  <input type="number" class="form-control" id="beneficiary-account" placeholder="Beneficiary Account Number">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Amount to transfer</label>
+                  <input type="number" class="form-control" id="amount-to-transfer" placeholder="Amount">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Purpose of transfer</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Purpose of transfer">
+                </div>
+                <button type="button" class="btn btn-dark" onclick="sendMoney()">Send money</button>
+                <div id="transfer-successful"></div>
+              </form>
+              <a class="btn btn-success mt-3 back-to-summary">
+                ← Back to Account Summary
+              </a>
             </div>
-            
-          </div>
-
-          <!-- TRANSFER IN -->
-          <div class="tab-pane fade" id="transfer-in" role="tabpanel" aria-labelledby="transfer-in-list">
-            <h2 class="display-4">Transfer In</h2>
-            <div class="mb-3">
-              <label for="amount-to-deposit" class="form-label">Amount to transfer</label>
-              <input type="number" class="form-control" id="amount-to-deposit" placeholder="Amount">
-            </div>
-            <button type="button" class="btn btn-dark" onclick="deposit()">Deposit</button>
-            <div id="deposit-successful"></div>
-          </div>
-
-          <!-- TRANSFER OUT -->
-          <div class="tab-pane fade" id="transfer-out" role="tabpanel" aria-labelledby="transfer-out-list">
-            <h2 class="display-4">Transfer out</h2>
-            <form id="send-money-form">
-              <select class="form-select" aria-label="Default select example" id="transfer-type">
-                <option value="Wire">Wire</option>
-                <option value="ACH">ACH</option>
-              </select>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Beneficiary Name</label>
-                <input type="text" class="form-control" id="beneficiary-name" placeholder="Beneficiary Name">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Beneficiary Account Number</label>
-                <input type="number" class="form-control" id="beneficiary-account" placeholder="Beneficiary Account Number">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Amount to transfer</label>
-                <input type="number" class="form-control" id="amount-to-transfer" placeholder="Amount">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Purpose of transfer</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Purpose of transfer">
-              </div>
-              <button type="button" class="btn btn-dark" onclick="sendMoney()">Send money</button>
-              <div id="transfer-successful"></div>
-            </form>
-          </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>

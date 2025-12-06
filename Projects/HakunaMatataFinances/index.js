@@ -17,6 +17,25 @@ eyeBtn.addEventListener('click', ()=> {
   }
 })
 
+const cardNumber = '102230379866'
+
+const cardEyeBtn = document.getElementById("see-card-number")
+const cardNoText = document.getElementById("card-no-text")
+let cardNoVisible = false
+cardEyeBtn.addEventListener('click', ()=> {
+  cardEyeBtn.classList.toggle('fa-eye')
+  cardEyeBtn.classList.toggle('fa-eye-slash')
+  cardNoVisible = !cardNoVisible
+
+  if(cardNoVisible) {
+    cardNoText.innerText = cardNumber
+    cardEyeBtn.title = "hide"
+  } else {
+    cardNoText.innerText = `*********${cardNumber.slice(-3)}`
+    cardEyeBtn.title = "show"
+  }
+})
+
 let balance = 120000
 document.getElementById('account-balance').innerText = `$${balance.toFixed(2)}`
 const transactionList = document.getElementById("transaction-list")
@@ -137,6 +156,27 @@ function sendMoney() {
     </div>
   `
 }
+
+document.querySelectorAll('[data-bs-toggle="tab"]').forEach(toggle => {
+  toggle.addEventListener('shown.bs.tab', function (event) {
+    // Remove active from Account Summary when switching to another tab
+    document.getElementById('account-summary').classList.remove('show', 'active');
+  });
+});
+
+document.querySelectorAll('.back-to-summary').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const summaryPane = document.getElementById('account-summary');
+    // Remove active from other panes
+    document.querySelectorAll('.tab-pane').forEach(pane => {
+      pane.classList.remove('show', 'active');
+    });
+    // Add active back to Account Summary
+    summaryPane.classList.add('show', 'active');
+  });
+});
+
 
 /*
   # Requirements:

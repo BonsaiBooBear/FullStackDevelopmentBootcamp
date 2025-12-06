@@ -1,4 +1,4 @@
-#see-account-number {
+#see-account-number, #see-card-number {
   cursor: pointer;
 }
 
@@ -16,6 +16,18 @@ a {
   color: #F6CE00;
 }
 
+#card-img {
+  width: 60%;
+}
+
+#card-details {
+  width: 38%;
+}
+
+#card-no-text {
+  color: #BB3D02;
+}
+
 #main-logo, nav, .navbar .dropdown-menu, .accordion-button {
   background-color: #1C0001 !important;
   color: white !important;
@@ -23,6 +35,10 @@ a {
 
 .nav-item {
   margin: 0 0.5rem;
+}
+
+.card-title {
+  color: #BB3D02;
 }
 
 .accordion-button:focus {
@@ -45,4 +61,46 @@ a {
 
 .balance-info {
   margin-left: 1rem;
+}
+
+.card-header {
+  background-color: #1C0001;
+  color: white;
+}
+
+.chat-thread {
+  height: 70vh;
+  overflow-y: auto;
+  border-top: none;
+}
+
+.chat-bubble {
+  max-width: 60%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.chat-incoming {
+  background-color: #1C0001;
+  color: white;
+  border-top-left-radius: 0.25rem;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.chat-outgoing {
+  background-color: #BB3D02;
+  color: white;
+  border-top-right-radius: 0.25rem;
+  align-self: flex-end;
+  margin-left: auto;  
+}
+
+.chat-meta {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 0.25rem;
 }
