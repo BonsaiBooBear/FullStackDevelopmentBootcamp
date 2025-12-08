@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callbacks</title>
+  <meta name="color-scheme" content="dark light">
+</head>
+<body>
+  <h1>Callbacks</h1>
+
+  <script>
+    // Synchronous code
+    // function func2(callback) {
+    //   console.log('func2')
+    //   callback()
+    // }
+
+    // func2(() => {
+    //   console.log('func1')
+    // })
+
+    /* ----------------------------------------- */
+    // Asynchronous code
+    // function test(callback) {
+    //   console.log(1)
+    //   console.log(2)
+    //   setTimeout(() => {
+    //     console.log(3)
+    //     callback()
+    //   }, 3000)
+    // }
+
+    // test(() => {
+    //   console.log(4)
+    //   console.log(5)
+    // })
+
+    /* ----------------------------------------- */
+    /* Example 1: Food order status
+        1. ORDER STATUS: Instantly
+        2. ORDER PREPARED: After 10 seconds
+    */
+    // function orderAccepted() {
+    //   console.log('ORDER ACCEPTED')
+    //   setTimeout(() => {
+
+    //   }, 10*1000)
+    // }
+
+    // function orderPrepared() {
+    //   console.log('ORDER PREPARED')
+    // }
+
+            /* CHANGES TO */
+
+    //  function orderAccepted(callback) {
+    //   console.log('ORDER ACCEPTED')
+    //   setTimeout(() => {
+    //     callback()
+    //   }, 10*1000)
+    // }
+
+    // orderAccepted(() => {
+    //   console.log('ORDER PREPARED')
+    // })
+
+    /* ----------------------------------------- */
+    /* Example 1: Fetch data from the server, then process that data
+        1. Fetching data from the server: 7 seconds
+        2. Processing the data: 5 seconds
+
+        Total time: 7s + 5s = 12s
+    */
+    // function fetchData() {
+    //   setTimeout(() => {
+    //     console.log('FETCHED DATA SUCCESSFULLY ✅')
+    //   }, 7*1000)
+    // }
+
+    // function processData() {
+    //   setTimeout(() => {
+    //     console.log('PROCESSED DATA SUCCESSFULLY ✅')
+    //   }, 5*1000)
+    // }
+
+    // fetchData()
+    // processData()
+    
+            /* CHANGES TO */
+    
+    // function fetchData(callback) {
+    //   console.log('FETCHING DATA FROM THE SERVER ...')
+    //   setTimeout(() => {
+    //     console.log('FETCHED DATA SUCCESSFULLY ✅')
+    //     callback()
+    //   }, 7*1000)
+    // }
+
+    // fetchData(() => {
+    //   console.log('PROCESSING ...')
+    //   setTimeout(() => {
+    //     console.log('PROCESSED DATA SUCCESSFULLY ✅')
+    //   }, 5*1000)
+    // })
+
+  </script>
+</body>
+</html>
+<br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Callbacks: A function passed as an argument to another function, so that it can be "executed later"
+    - Handle asynchronous code
+    - Syntax 1:
+      func2(func1)
+    - Syntax 2:
+      func2(function() {
+        // code
+      })
+*/
+</pre>
