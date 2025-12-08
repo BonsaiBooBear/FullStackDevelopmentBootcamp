@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous JavaScript</title>
+  <meta name="color-scheme" content="dark light">
+</head>
+<body>
+  <h1>Asynchronous JavaScript</h1>
+
+  <!-- <button onclick="startStopwatch()">Start 1 min</button> -->
+  <!-- <button onclick="clearTimeout()">Clear timeout</button> -->
+
+  <!-- BOMB EXPLOSION (setTimeout, clearTimeout) -->
+  <!-- <h2 id="status"></h2>
+  <button onclick="startBombTimer()">Start the timer for the explosion</button>
+  <button onclick="diffuseBomb()">Diffuse Bomb</button> -->
+
+  <!-- <button onclick="test()">Clear interval</button> -->
+
+  <!-- ROCKET LAUNCH (setInterval, clearInterval) -->
+  <div style="text-align: center;">
+    <img src="assets/rocket.png" width="300" id="rocket-img">
+    <h2 id="status"></h2>
+    <button onclick="startLaunch()">Start Launch</button>
+    <button onclick="abortLaunch()">Abort Launch</button>
+  </div>
+
+  <script>
+    // console.log(1)
+    // console.log(2)
+    // console.log(3)
+    // console.log(4)
+    // console.log(5)
+
+    // setTimeout(()=>{
+    //   console.log('Hi')
+    // }, 3000) // 3 seconds
+
+    // setTimeout(()=>{
+    //   console.log('Test')
+    // }, 5000) // 5 seconds
+
+    // console.log(1)
+    // console.log(2)
+    // setTimeout(()=> {
+    //   console.log(3)
+    // }, 3000)
+    // console.log(4)
+    // console.log(5)
+
+    // console.log(1)
+    // console.log(2)
+    // setTimeout(()=> {
+    //   console.log(3)
+    // }, 0) // even though it is 0 ms, it was automatically delegated to asynchronous, so it will not be executed with the rest of the synchronous code.
+    // console.log(4)
+    // console.log(5)
+
+    // Asynchronous functions will run at the same time (same timer for both)
+    // setTimeout(()=>{
+    //   console.log('Hi')
+    // }, 3000) // 3 seconds
+    // setTimeout(()=>{
+    //   console.log('Bye')
+    // }, 2000) // 3 seconds
+
+    // function startStopwatch() {
+    //   setTimeout(()=> {
+    //     alert('⏲ 1 min up!')
+    //   }, 60 * 1000)
+    // }
+
+    // const timerId = setTimeout(()=>{
+    //   console.log('Hi')
+    // }, 3000) // 3 seconds
+
+    // function clearTimer() {
+    //   clearTimeout(timerId)
+    // }
+
+    /* ----------------------------------------- */
+    // let timerId
+    // function startBombTimer() {
+    //   document.getElementById('status').innerText = 'Bomb will explode in 10 seconds 💣'
+    //   timerId = setTimeout(() => {
+    //     document.getElementById('status').innerText = 'EXPLODED! 💥💥💥'
+    //   }, 10000)
+    // }
+
+    // function diffuseBomb() {
+    //   clearTimeout(timerId)
+    //   document.getElementById('status').innerText = 'BOMB DIFFUSED! 🎉🎉🎉'
+    // }
+
+    /* ----------------------------------------- */
+    // setInterval(() => {
+    //   console.log('Hi')
+    // }, 2000)
+    
+    // let count = 0
+    // setInterval(() => {
+    //   console.log(count)
+    //   count++
+    // }, 1000)
+
+    // let count = 0
+    // const timerId = setInterval(() => {
+    //   console.log(count)
+    //   count++
+    // }, 1000)
+
+    // function test() {
+    //   clearInterval(timerId)
+    // }
+
+    /* ----------------------------------------- */
+    // let timerId
+    // let countDown = 10
+    // function startLaunch() {
+    //   timerId = setInterval(() => {
+    //     if(countDown == 0) {
+    //       document.getElementById('status').innerText = `🚀LAUNCH SUCCESSFUL!`
+    //       clearInterval(timerId)
+    //       return
+    //     }
+    //     document.getElementById('status').innerText = `🚀 Launching in ${countDown} seconds...`
+    //     countDown--
+    //   }, 1000)
+    // }
+
+    // function abortLaunch() {
+    //   clearInterval(timerId)
+    //   document.getElementById('status').innerText = `🚀LAUNCH ABORTED ❌`
+    // }
+
+    // let timerId
+    // let countDown = 10
+    // function startLaunch() {
+    //   timerId = setInterval(() => {
+    //     if(countDown == 0) {
+    //       clearInterval(timerId)
+    //       document.getElementById('status').innerText = `🚀LAUNCH SUCCESSFUL!`
+    //       document.getElementById('rocket-img').src = 'https://mir-s3-cdn-cf.behance.net/project_modules/hd/e59b07112562445.6017104965538.gif'
+    //       return
+    //     }
+    //     document.getElementById('status').innerText = `🚀 Launching in ${countDown} seconds...`
+    //     countDown--
+    //   }, 1000)
+    // }
+
+    // function abortLaunch() {
+    //   clearInterval(timerId)
+    //   document.getElementById('status').innerText = `🚀LAUNCH ABORTED ❌`
+    //   document.getElementById('rocket-img').src = 'assets/rocket.png'
+    // }
+
+    /* ----------------------------------------- */
+  </script>
+</body>
+</html>
+<br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Asynchronous JavaScript
+    - Synchronous code: Executed one line at a time
+    - Asynchronous code: Executed as an independent logic (Executed parallelly)
+
+    - JavaScript is a single threaded language
+      - There is only one thread (main thread) which executes the complete JS code one expression at a time.
+      - Still, it can execute asynchronous code with the help of other elements in the JS Engine (Event Loop, Task Queues, Web APIs).
+
+    # Timer methods:
+      - setTimeout(): Execute code after a specified time
+        - Syntax:
+          setTimeout(()=> {
+            //logic
+          }, time) // (Callback, time)
+          - Parameters:
+            - Callback: Function to execute after the specified time
+            - time: in milliseconds (1000ms = 1s)
+          - Return:
+            - timerId: Unique ID assigned to the timeout created by setTimeout method
+        - clearTimeout(timerId): Clear the timeout created by setTimeout method
+      - setInterval(): Execute code repeatedly after a specified time interval
+          - Syntax:
+          setInterval(()=> {
+            //logic
+          }, time) // (Callback, time)
+          - Parameters:
+            - Callback: Function to execute after the specified time repeatedly
+            - time: in milliseconds (1000ms = 1s)
+          - Return:
+            - timerId: Unique ID assigned to the interval created by setInterval method
+        - clearInterval(timerId): Clear the interval created by setInterval method
+
+*/
+</pre>
