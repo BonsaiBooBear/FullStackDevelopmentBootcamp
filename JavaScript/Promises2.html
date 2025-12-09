@@ -75,7 +75,7 @@
     const orderOnTheWay = () => new Promise((resolve, reject) => {
       setTimeout(() => {
         console.log('Order is on the way 🚴‍♂️')
-        resolve()
+        reject()
       }, 3*1000)
     })
 
