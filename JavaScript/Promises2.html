@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise Chaining</title>
+  <meta name="color-scheme" content="dark light">
+</head>
+<body>
+  <h1>Promises Chaining</h1>
+  <button onclick="placeOrder()">Place order</button>
+
+  <script>
+    /* Example: Order tracking app
+      - Instantly: Order confirmed ✅
+      - After 2 seconds: Order is being prepared 🍜
+      - After 10 seconds: Order prepared 🎉
+      - After 5 seconds: Order handed over to delivery person 📦
+      - After 3 seconds: Order is on the way 🚴‍♂️
+      - After 8 seconds: Order reached it's destination 🎈
+      - After 4 seconds: Order has been delivered 😋
+
+      Total processing time for order: 32 seconds
+    */
+
+    // const placeOrder = (callback) => {
+    //   console.log('Order confirmed ✅')
+    //   callback()
+    // }
+
+    // placeOrder(() => {
+    //   setTimeout(() => {
+    //     console.log('Order is being prepared 🍜')
+    //     setTimeout(() => {
+    //       console.log('Order prepared 🎉')
+    //       setTimeout(() => {
+    //         console.log('Order handed over to delivery person 📦')
+    //         setTimeout(() => {
+    //           console.log('Order is on the way 🚴‍♂️')
+    //             setTimeout(() => {
+    //               console.log(`Order reached it's destination 🎈`)
+    //               setTimeout(() => {
+    //                 console.log('Order has been delivered 😋')
+    //               }, 4*1000)
+    //             }, 8*1000)
+    //         }, 3*1000)
+    //       }, 5*1000)
+    //     }, 10*1000)
+    //   }, 2000)
+    // })
+
+    /* CHANGES TO */
+
+    const orderBeingPrepared = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order is being prepared 🍜')
+        resolve()
+      }, 2000)
+    })
+
+    const orderPrepared = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order prepared 🎉')
+        resolve()
+      }, 10*1000)
+    })
+
+    const orderHandedOver = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order handed over to delivery person 📦')
+        resolve()
+      }, 5*1000)
+    })
+
+    const orderOnTheWay = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order is on the way 🚴‍♂️')
+        resolve()
+      }, 3*1000)
+    })
+
+    const orderReachedDestination = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log(`Order reached it's destination 🎈`)
+        resolve()
+      }, 8*1000)
+    })
+
+    const orderDelivered = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order has been delivered 😋')
+        resolve()
+      }, 4*1000)
+    })
+
+    // const placeOrder = () => {
+    //   console.log('Order confirmed ✅')
+
+    //   orderBeingPrepared()
+    //     .then(() => orderPrepared())
+    //     .then(() => orderHandedOver())
+    //     .then(() => orderOnTheWay())
+    //     .then(() => orderReachedDestination())
+    //     .then(() => orderDelivered())
+    //     .then(() => console.log('Enjoy your meal ✅'))
+    //     .catch(() => console.log('Something went wrong'))
+    // }
+
+    // OR
+
+    const placeOrder = () => {
+      console.log('Order confirmed ✅')
+
+      orderBeingPrepared()
+        .then(orderPrepared)
+        .then(orderHandedOver)
+        .then(orderOnTheWay)
+        .then(orderReachedDestination)
+        .then(orderDelivered)
+        .then(() => console.log('Enjoy your meal ✅'))
+        .catch(() => console.log('Something went wrong'))
+    }
+
+  </script>
+</body>
+</html>
+<br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # 
+    
+*/
+</pre>
