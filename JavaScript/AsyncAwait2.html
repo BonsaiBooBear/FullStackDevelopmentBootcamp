@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async/Await Example</title>
+  <meta name="color-scheme" content="dark light">
+</head>
+<body>
+  <h1>Async/Await Example</h1>
+  <button onclick="placeOrder()">Place order</button>
+  
+  <script>
+    /* Example: Order tracking app
+      - Instantly: Order confirmed ✅
+      - After 2 seconds: Order is being prepared 🍜
+      - After 10 seconds: Order prepared 🎉
+      - After 5 seconds: Order handed over to delivery person 📦
+      - After 3 seconds: Order is on the way 🚴‍♂️
+      - After 8 seconds: Order reached it's destination 🎈
+      - After 4 seconds: Order has been delivered 😋
+
+      Total processing time for order: 32 seconds
+    */
+    const orderBeingPrepared = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order is being prepared 🍜')
+        resolve()
+      }, 2000)
+    })
+
+    const orderPrepared = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order prepared 🎉')
+        resolve()
+      }, 10*1000)
+    })
+
+    const orderHandedOver = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order handed over to delivery person 📦')
+        resolve()
+      }, 5*1000)
+    })
+
+    const orderOnTheWay = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order is on the way 🚴‍♂️')
+        resolve()
+      }, 3*1000)
+    })
+
+    const orderReachedDestination = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log(`Order reached it's destination 🎈`)
+        resolve()
+      }, 8*1000)
+    })
+
+    const orderDelivered = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('Order has been delivered 😋')
+        resolve()
+      }, 4*1000)
+    })
+
+    // const placeOrder = () => {
+    //   console.log('Order confirmed ✅')
+
+    //   orderBeingPrepared()
+    //     .then(() => orderPrepared())
+    //     .then(() => orderHandedOver())
+    //     .then(() => orderOnTheWay())
+    //     .then(() => orderReachedDestination())
+    //     .then(() => orderDelivered())
+    //     .then(() => console.log('Enjoy your meal ✅'))
+    //     .catch(() => console.log('Something went wrong'))
+    // }
+
+    const placeOrder = async () => {
+      try {
+        console.log('Order confirmed ✅')
+        await orderBeingPrepared()
+        await orderPrepared()
+        await orderHandedOver()
+        await orderOnTheWay()
+        await orderReachedDestination()
+        await orderDelivered()
+        console.log('Enjoy your meal ✅')
+      } catch (error) {
+        console.log('Something went wrong')
+      }
+    }
+
+  </script>
+</body>
+</html>
+<br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Async Await
+    - Syntactic Sugar / Alternative for promise handling
+    - 'async' keyword: Used to make any function asynchronous
+    - 'await' keyword:
+        - Used to pause the execution of an async function until the promise is resolved
+        - Returns the resolvedResult of the promise when the promise is resolved
+        - Throws the rejected result of the promise when the promise is rejected
+    - Syntax:
+      async function handlePromise() {
+        try {
+          const resolvedResult = await promise1
+          console.log(resolvedResult)
+        } catch (rejectedResult) {
+          console.log(rejectedResult)
+        }
+      }
+
+    - Different type of asynchronous functions
+      - async function abc() {}
+      - const abc = async function() {}
+      - const abc = async () => {}
+
+*/
+</pre>
