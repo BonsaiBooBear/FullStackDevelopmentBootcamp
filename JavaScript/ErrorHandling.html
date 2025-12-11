@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Handling</title>
+  <meta name="color-scheme" content="dark light">
+</head>
+<body>
+  <h1>Error Handling</h1>
+  <h2 id="test"></h2>
+  
+  <script>
+    //  console.log('START')
+
+    // try {
+    //   const x = 10
+    //   x = 20
+    // } catch (error) {
+    //   alert('Something went wrong at our end')
+    //   console.log(error)
+    // }
+  
+    // // Because code would stop executing at the error, the h2 innerText would never be updated. Page would be blank.
+    // document.getElementById('test').innerText = 'Welcome to our application'
+
+    // console.log('END')
+
+    /* ---------------------------------- */
+    // console.log('START')
+    
+    // const input = prompt('Please enter transaction details in JSON string')
+
+    // // input = {"txnId": 1263783, "amount": 1500.00, "type": "DEBIT"}
+    // console.log('Input: ' + input)
+
+    // try {
+    //   const transactionDetails = JSON.parse(input)
+    //   console.log(transactionDetails)
+    //   // transactionDetails = { txnId: 1263783, amount: 1500.00, type: 'DEBIT' }
+    // } catch (error) {
+    //   alert('JSON string provide is not in the correct format')
+    // }
+
+    // console.log('END')
+
+    /* ---------------------------------- */
+    // console.log('START')
+
+    // try {
+    //   console.log('TRY')
+    //   const x = 5
+    //   x = 10
+    // } catch(error) {
+    //   console.log('CATCH', error)
+    // } finally {
+    //   console.log('FINALLY')
+    // }
+
+    // console.log('END')
+    
+    /* ---------------------------------- */
+    // console.log('START')
+
+    // try {
+    //   console.log('TRY')
+    //   const dividend = Number(prompt('Enter dividend'))
+    //   const divisor = Number(prompt('Enter divisor'))
+
+    //   if(divisor == 0) {
+    //     throw new Error('Division by zero now allowed')
+    //   }
+    //   console.log(dividend, divisor)
+    //   const result = dividend / divisor
+    //   console.log(result)
+    // } catch(error) {
+    //   console.log('CATCH', error)
+    // } finally {
+    //   console.log('FINALLY')
+    // }
+
+    // console.log('END')
+
+  </script>
+</body>
+</html>
+<br><br>
+<hr>
+
+<h2>Notes From Live Session</h2>
+<pre>
+/*
+  # Error Handling ***:
+    - Runtime errors in JS terminate the execution process and the rest of the code is not executed
+    - Error handling is a mechanism to handle these runtime errors and provide meaningful error messages to the user
+    - Syntax:
+      try {
+        // code which is probably to throw an error
+      } catch (error) {
+        // If error is thrown, handle it here
+      }
+    - finally {}: Executes in both scenarios
+    - throw keyword: Throw custom errors
+      - Custom error: new Error('error message')
+      - Syntax: Throw new Error('error message')
+
+    - Additional note:
+      - If no error: START -> try -> END
+      - If error: START -> try -> catch -> END
+*/
+</pre>
